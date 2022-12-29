@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>XAMPP FAQs for Windows</title>
+
+    <meta name="description" content="Instructions on how to install XAMPP for Windows distributions." />
+    
+
+    <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/dashboard/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/dashboard/javascripts/modernizr.js" type="text/javascript"></script>
+
+
+    <link href="/dashboard/images/favicon.png" rel="icon" type="image/png" />
+
+
+  </head>
+
+  <body class="de de_faq">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <header class="header contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/dashboard/de/index.html">Apache Friends</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#">
+              <span>Menu</span>
+            </a>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Left Nav Section -->
+          <ul class="left">
+              <li class="item active"><a href="/dashboard/de/faq.html">Häufig gestellte Fragen</a></li>
+              <li class="item "><a href="/dashboard/de/howto.html">HOW-TO Guides</a></li>
+              <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class="item "><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="hero">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Windows <span>Häufig gestellte Fragen</span></h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="large-8 columns">
+    <dl class="accordion">
+      <dt>Wie installiere ich XAMPP?</dt>
+      <dd>
+      <p>XAMPP für Windows gibt es in drei verschiedenen Versionen:</p>
+      <p>Installationsprogramm:<br />
+      Wahrscheinlich der einfachste Weg, um XAMPP zu installieren.</p>
+      <p>ZIP:<br />
+      Für Puristen: XAMPP als ZIP-Archiv.</p>
+      <p>7zip:<br />
+      Für Puristen mit geringer Bandbreite: XAMPP als 7zip-Archiv.</p>
+      <p>Hinweis: Wenn Sie die Dateien entpacken, kann es zu falschen Warnungen Ihres Anti-Viren-Programms kommen.</p>
+      <p><strong>Mit dem Installer:</strong></p>
+      <p></p>
+      <p>Das XAMPP-Control-Panel zum Starten und Beenden von Apache, MySQL, FileZilla &amp; Mercury oder zum Installieren dieser Server als Dienste.</p>
+      <p><strong>Installation mit einer Zip-Datei</strong></p>
+      <p>Packen Sie das Zip-Archiv in den Ordner Ihrer Wahl aus. XAMPP extrahiert sich in das Unterverzeichnis "\\xampp" unterhalb des gewählten Zielverzeichnisses. Starten Sie dann die Datei "setup_xampp.bat", um die XAMPP-Einstellungen an Ihr System anzupassen.</p>
+      <p>Wenn Sie ein Wurzel-Verzeichnis "C:\\" als Ziel wählen, müssen Sie die "setup_xampp.bat" nicht starten.</p>
+      <p>Wie mit dem Installationsprogramm können Sie nun das "XAMPP-Control-Panel" für weitere Aufgaben benutzen.</p>
+      </dd>
+      <dt>Does XAMPP include MySQL or MariaDB?</dt>
+      <dd>
+      <p>Since XAMPP 5.5.30 and 5.6.14, XAMPP ships MariaDB instead of MySQL. The commands and tools are the same for both.</p>
+      </dd>
+      <dt>Wie kann ich XAMPP ohne Setup starten?</dt>
+      <dd>
+      <p>Wenn Sie XAMPP in einen Top-Level-Ordner wie "C:\\" oder "D:\\" entpacken, können Sie die meisten Server wie Apache oder MySQL direkt starten, ohne die Datei "setup_xampp.bat" auszuführen.</p>
+      <p>Wenn Sie XAMPP auf ein USB-Laufwerk installieren, wird empfohlen, das Setup-Skript nicht zu benutzen oder darin relative Pfade auszuwählen, da ein solches Laufwerk auf jedem PC einen anderen Laufwerksbuchstaben haben kann. Sie können mit dem Setup-Script jederzeit von absoluten auf relative Pfade wechseln.</p>
+      <p>Der einfachste Weg ist, die Installer-Version von der Download-Seite zu nutzen, um XAMPP zu Installieren. Nach dem Fertigstellen der Installation finden Sie XAMPP unter Start &rarr; Programme &rarr; XAMPP. Man kann das XAMPP-Controll-Panel benutzen, um die Server manuell zu starten oder zu beenden, als auch diese Programme als Windows-Dienste zu installieren oder zu deinstallieren.</p>
+      <p>Das XAMPP-Control-Panel zum Starten und Beenden von Apache, MySQL, FileZilla &amp; Mercury oder zum Installieren dieser Server als Dienste.</p>
+      </dd>
+      <dt>Wie starte / stoppe ich XAMPP?</dt>
+      <dd>
+      <p>Das universelle Kontrollzentrum ist das "XAMPP Control Panel" (Dank an www.nat32.com). Es wird mit folgendem Befehl gestartet:</p>
+      <p><code>\xampp\xampp-control.exe</code></p>
+      <p>Sie können auch einige Batchdateien benutzen, um die Serverdienste zu starten/stoppen:</p>
+      <p>
+      <ul>
+        <li>Apache- &amp; MySQL-Start:
+        <code>\xampp\xampp_start.exe</code></li>
+        <li>Apache- &amp; MySQL-Stopp:
+        <code>\xampp\xampp_stop.exe</code></li>
+        <li>Apache-Start:
+        <code>\xampp\apache_start.bat</code></li>
+        <li>Apache-Stopp:
+        <code>\xampp\apache_stop.bat</code></li>
+        <li>MySQL-Start:
+        <code>\xampp\mysql_start.bat</code></li>
+        <li>MySQL-Stopp:
+        <code>\xampp\mysql_stop.bat</code></li>
+        <li>Mercury-Mailserver-Start:
+        <code>\xampp\mercury_start.bat</code></li>
+        <li>Mercury-Mailserver-Stopp:
+        <code>\xampp\mercury_stop.bat</code></li>
+        <li>FileZilla-Server-Start:
+        <code>\xampp\filezilla_start.bat</code></li>
+        <li>FileZilla-Server-Stopp:
+        <code>\xampp\filezilla_stop.bat</code></li></ul></p>
+      </p>
+      </dd>
+      <dt>Wie kann ich testen, ob alles funktioniert?</dt>
+      <dd>
+      <p>Geben Sie folgende URL in Ihrem Lieblings-Web-Browser ein:</p>
+      <p><code>http://localhost/</code> oder  <code>http://127.0.0.1/</code> </p>
+      <p>You should see the XAMPP start page, as shown below.</p>
+        <img src="/dashboard/images/screenshots/xampp-windows-start.jpg" />
+      </dd>
+      <dt>Wie kann ich ein Serverprogramm als Windowsdienst installieren?</dt>
+      <dd>
+      <p>Jedes Serverprogramm in XAMPP kann als Windowsdienst installiert werden. Diese Installation kann über das XAMPP-Control-Panel durchgeführt werden. Es ist nötig Administrationsrechte zu haben, um das XAMPP-Controll-Panel und dessen Skripten zu nutzen.</p>
+      <p>Manuelle Installation des Apache als Windowsdienst: \\xampp\\apache\\apache_installservice.bat</p>
+      <p>Manuelle Deinstallation des Apache als Windowsdienst: \\xampp\\apache\\apache_uninstallservice.bat </p>
+      <p>Manuelle Installation des MySQL-Servers als Windowsdienst: \\xampp\\mysql\\mysql_installservice.bat </p>
+      <p>Manuelle Deinstallation des MySQL-Servers als Windowsdienst: \\xampp\\mysql\\mysql_uninstallservice.bat </p>
+      <p>FileZilla (FTP Server) als Windowsdienst installieren und deinstallieren: \\xampp\\filezilla_setup.bat </p>
+      <p>Mercury-Mail-Server: eine Windowsdienst-Installation gibt es nicht</p>
+      </dd>
+      <dt>Ist XAMPP zum Produktiveinsatz geeignet?</dt>
+      <dd>
+      <p>XAMPP ist nicht für den Einsatz in Produktivumgebungen, sondern ausschließlich für den Einsatz als Entwicklungsumgebung gedacht. XAMPP ist so offen wie möglich konfiguriert, um dem Entwickler alles, was er/sie möchte, zu erlauben. Dies ist für Entwicklungsumgebungen großartig, kann aber im Produktiveinsatz fatale Auswirkungen haben.</p>
+      <p>Hier ist eine Liste fehlender Sicherheitseinstellungen in XAMPP:</p>
+      <ol>
+        <li>Der MySQL-Administrator (root) hat kein Passwort.</li>
+        <li>Der MySQL-Daemon ist übers Netzwerk erreichbar.</li>
+        <li>ProFTPD nutzt das Passwort "lampp" für den Benutzer "daemon".</li>
+        <li>Die Standard-Benutzer von Mercury und FileZilla sind bekannt.</li>
+      </ol>
+      <p>Alle Einstellungen beinhalten einen hohen Sicherheitsrisiko, besonders wenn XAMPP über das Netz und von anderen Personen außerhalb Ihres lokalen Netzes erreichbar ist. Es kann auch helfen, eine Firewall oder einen (NAT-) Router zu nutzen. Im Falle, dass Sie eine Firewall oder einen Router nutzen, ist Ihr PC, auf dem XAMPP läuft, normalerweise nicht mehr aus dem Internet erreichbar. Es liegt an Ihnen, diese Probleme zu lösen. Eine kleine Hilfe dazu ist unter der "XAMPP-Sicherheits-Konsole" zu finden.</p>
+      <p>Bitte sichern Sie XAMPP ab, bevor Sie etwas für alle Online zur Verfügung stellen. Eine Firewall und ein externer Router sind nur für eine unterste Ebene an Sicherheit ausreichend. Für etwas mehr Sicherheit sollten Sie die "XAMPP-Sicherheits-Konsole" aufrufen und Passwörter vergeben.</p>
+      <p>Wenn Sie möchten, dass Ihr XAMPP auch aus dem Internet erreichbar ist, so besuchen Sie bitte folgenden URI, der einige Probleme lösen kann:</p>
+      <p><code> http://localhost/security/</code></p>
+      <p>Mit der Sicherheitskonsole können Sie ein Passwort für den MySQL-Benutzer "root" und für phpMyAdmin setzen. Sie können auch eine Authentifikation für die Demoseiten von XAMPP aktivieren.</p>
+      <p>Dieses web-basierte Werkzeug löst keine weitergehenden Sicherheitslücken. Insbesondere den FileZilla-FTP-Server und den Mercury-Mail-Server müssen Sie selbst absichern.</p></dd>
+      <dt>Wie deinstalliere ich XAMPP?</dt>
+      <dd>
+      <p>Wenn Sie XAMPP mit Hilfe der Installer-Version installiert haben, verwenden Sie unbedingt den "Uninstaller" (De-Installationsassistent), also nicht nur löschen. Durch den "Uninstaller" werden alle Einstellungen in der Windowsregistrierung zurückgenommen, gleichzeitig werden alle Anwendungen deinstalliert, die zu XAMPP gehören. Wir empfehlen dringend, das "Uninstall"-Programm aus der Version des Installers zu benutzen, mit dem Sie XAMPP installiert haben. Bitte sichern Sie alle wichtigen Daten, die Sie behalten möchten, bevor Sie XAMPP deinstallieren.</p>
+      <p>Wenn Sie XAMPP mit Hilfe der ZIP- oder 7zip-Version installiert haben, fahren Sie alle XAMPP-Server herunter und verlassen Sie alle Fenster. Wenn Sie irgendwelche Dienste eingerichtet haben, machen Sie auch das rückgängig. Dann löschen Sie einfach den gesamten Ordner, in dem XAMPP installiert war. Es gibt keine Registry-Einträge und keine Environment-Variablen, die gelöscht werden müssten.</p>
+      </dd>
+      <dt>Was ist die "lite"-Version von XAMPP?</dt>
+      <dd>
+      <p>XAMPP Lite (das bedeutet "light" (leicht) wie in "Leichtgewicht") ist ein kleineres Bündel aus XAMPP-Komponenten, das empfohlen wird für rasche Arbeiten, die nur PHP und MySQL brauchen. Einige Dienste wie Mercury-Mail und FileZilla-FTP fehlen in der Lite-Version.</p>
+      </dd>
+      <dt>Wohin gehört mein Web-Inhalt?</dt>
+      <dd>
+      <p>Das Stammverzeichnis für alle WWW-Dokumente ist \\xampp\\htdocs. Wenn Sie eine Datei "test.html" in dieses Verzeichnis legen, können Sie darauf mit der URI "http://localhost/test.html" zugreifen.</p>
+      <p>Und "test.php"? Einfach folgende Adresse aufrufen "http://localhost/test.php". Ein einfaches Testskript kann so aussehen:</p>
+      <p><code>&lt;?php<br />
+        echo 'Hello world'; <br />
+        ?&gt;</code></p>
+      <p>Eine neues Unterverzeichnis für ihr eigenes Web? Einfach ein neues Verzeichnis (z. B. "neu") innerhalb des Verzeichnisses "\\xampp\\htdocs" anlegen (am besten ohne Leerzeichen und nur ASCII-Zeichen), erstellen Sie dann einfach eine Testdatei in diesem neuen Verzeichnis und rufen Sie sie mit "http://localhost/neu/test.php" auf.</p>
+      <p><strong>Zusätzliche Einzelheiten</strong></p>
+      <p>HTML:<br>
+      Ausführbar: \xampp\htdocs<br>
+      Erlaubte Endungen: .html .htm<br>
+      => Basispaket</p>
+      <p>SSI:<br>
+      Ausführbar: \xampp\htdocs<br>
+      Erlaubte Endungen: .shtml<br>
+      => Basispaket</p>
+      <p>CGI:<br>
+      Ausführbar: \xampp\htdocs and \xampp\cgi-bin<br>
+      Erlaubte Endungen: .cgi<br>
+      => Basispaket</p>
+      <p>PHP:<br>
+      Ausführbar: \xampp\htdocs and \xampp\cgi-bin<br>
+      Erlaubte Endungen: .php<br>
+      => Basispaket</p>
+      <p>Perl:<br>
+      Ausführbar: \xampp\htdocs and \xampp\cgi-bin<br>
+      Erlaubte Endungen: .pl<br>
+      => Basispaket</p>
+      <p>Apache::ASP Perl:<br>
+      Ausführbar: \xampp\htdocs<br>
+      Erlaubte Endungen: .asp<br>
+      => Basispaket</p>
+      <p>JSP Java:<br>
+      Ausführbar: \xampp\tomcat\webapps\java (e.g.)<br>
+      Erlaubte Endungen: .jsp<br>
+      => Tomcat add-on</p>
+      <p>Servlets Java:<br>
+      Ausführbar: \xampp\tomcat\webapps\java (e.g.)<br>
+      Erlaubte Endungen: .html (u.a)<br>
+      => Tomcat add-on</p>
+      </dd>
+      <dt>Kann ich die XAMPP-Installation woanders hin legen?</dt>
+      <dd>
+      <p>Ja. Nachdem Sie das XAMPP-Verzeichnis woanders hin gelegt haben, müssen Sie die "setup_xampp.bat"-Datei ausführen. Die Verzeichnispfade in den Konfigurationsdateien werden durch diesen Schritt angepasst.</p>
+      <p>Wurden Server als Windowsdienst installiert, so ist es wichtig, diese vorher zu deinstallieren, nach dem Verlegen der XAMPP-Installation kann man dann die Windowsdienste wieder installieren.</p>
+      <p>Achtung: Die Konfigurationsdateien Ihrer eigenen Skripten - wie PHP-Anwendungen - werden nicht geändert. Aber es ist möglich, ein "Plug-in" für den Installer zu schreiben. Mit einem solchen Plug-in kann der Installer auch solche Dateien anpassen.</p>
+      </dd>
+      <dt>Was sind "automatische Startseiten" für die WWW-Verzeichnisse?</dt>
+      <dd>
+      <p>Der Standard-Dateiname für die Appachefunktion "DirectoryIndex" ist "index.html" oder "index.php". Jedes Mal, wenn Sie lediglich ein Verzeichnis im Browser aufrufen (z. B. "http://localhost/xampp/") und Apache findet darin eine solche Datei, wird diese Datei anstelle eines Inhaltsverzeichnisses angezeigt.</p>
+      </dd>
+      <dt>Wo kann ich die Konfigurationen ändern?</dt>
+      <dd>
+      <p>Fast alle Einstellungen in XAMPP können Sie mit Konfigurationsdateien ändern. Öffnen Sie einfach die Datei in einem Text-Editor und ändern Sie die gewünschte Einstellung. Nur FileZilla und Mercury sollten Sie mit dem Konfigurationswerkzeug konfigurieren.</p>
+      </dd>
+
+      <dt>Warum läuft XAMPP nicht auf Windows XP SP2?</dt>
+      <dd>
+      <p>Microsoft liefert mit Service Pack 2 (SP2) eine bessere Firewall, die automatisch startet. Diese Firewall blockiert jedoch die erforderlichen Ports 80 (http) und 443 (https), sodass Apache nicht starten kann.</p>
+      <p><strong>Die schnelle Lösung:</strong></p>
+      <p>Deaktivieren Sie die Microsoft-Firewall mit der Systemsteuerung &rarr; Windows-Firewall und versuchen Sie, XAMPP erneut zu starten. Besser wäre es, eine Ausnahme im Sicherheitscenter einzurichten.</p>
+      <p><strong>Die folgenden Ports sind in Benutzung für Basis-Funktionalitäten:</strong></p>
+      <p>Apache (HTTP): Port 80<br/>
+        Apache (WebDAV): Port 81</br>
+        Apache (HTTPS): Port 443</br>
+        MySQL: Port 3306</br>
+        FileZilla (FTP): Port 21</br>
+        FileZilla (Admin): Port 14147</br>
+        Mercury (SMTP): Port 25</br>
+        Mercury (POP3): Port 110</br>
+        Mercury (IMAP): Port 143</br>
+        Mercury (HTTP): Port 2224</br>
+        Mercury (Finger): Port 79</br>
+        Mercury (PH): Port 105</br>
+        Mercury (PopPass): Port 106</br>
+        Tomcat (AJP/1.3): Port 8009</br>
+        Tomcat (HTTP): Port 8080</p>
+      </dd>
+
+      <dt>Warum funktioniert XAMPP nicht bei Windows VISTA?</dt>
+      <dd>
+      <p><strong>Benutzerkontensteuerung (UAC)</strong></p>
+      <p>Im Verzeichnis "C:\\Programme" haben Sie nicht alle Zugriffsrechte, nicht einmal als Administrator. Oder Sie haben eingeschränkte Zugriffsrechte (z. B. für "\\xampp\\htdocs"). In diesem Fall können Sie die Datei nicht verändern.</br>
+<strong>Lösung:</strong> Erhöhen Sie ihre Zugriffsrechte über den Dateimanager (rechte Maustaste / Sicherheit) oder schalten Sie die Benutzerkontensteuerung (UAC) ab.</p>
+      <p>Sie haben Apache/MySQL in "C:\\xampp" als Windowsdienste installiert. Aber Sie können diese Windowsdienste nicht mehr über das "XAMPP-Controll-Panel" starten/anhalten oder sie können sie nicht deinstallieren.</br></br>
+<strong>Lösung:</strong> Benutzen Sie die Systemsteuerung &rarr; Verwaltung &rarr; Dienste-Konsole von Windows oder deaktivieren Sie die Benutzerkontensteuerung UAC.</p>
+      <p><strong>Deaktivieren der Benutzerkontensteuerung (UAC)</strong></p>
+      <p>Verwenden Sie das Programm "msconfig", um die Benutzerkontensteuerung zu deaktivieren. In "msconfig" gehen Sie auf "Tools", wählen "UAC-Einstellungen ändern", klicken auf "Starten" und überprüfen Ihre Auswahl. Danach müssen Sie Windows neu starten. Zur gleichen Zeit können Sie die Benutzerkontensteuerung wieder aktivieren.</p>
+      </dd>
+
+      <dt>Wie überprüfe ich die md5-Prüfsumme (md5_checksum)?</dt>
+      <dd>
+      <p>Um Dateien zu vergleichen, werden oft Prüfsummen (checksums) benutzt. Üblicherweise erzeugt man eine md5-Prüfsumme (Message Digest Algorithm 5).</p>
+      <p>Mit dieser md5-Prüfsumme können Sie testen, ob Ihr Download des XAMPP-Pakets korrekt ist oder nicht. Natürlich benötigen Sie ein Programm, das diese Prüfsummen erstellen kann. Für Windows können Sie ein Kommandozeilenwerkzeug von Microsoft verwenden:</p>
+      <p><a href="http://support.microsoft.com/kb/841290">Verfügbarkeit und Beschreibung des Prüfsummen-Dienstprogramms "File Checksum Integrity Verifier utility" - fciv</a></p>
+      <p>Es ist auch möglich, ein anderes Programm zu benutzen, das eine md5-Prüfsumme erzeugen kann, z. B. "GNU md5sum" oder "winMd5Sum.exe".</p>
+      <p>Wenn Sie ein solches Programm installiert haben (z.B. fciv.exe), können Sie die folgenden Schritte ausführen:</p>
+      <p>
+        <ul>
+          <li>Laden Sie XAMPP (z. B. xampp-win32-1.8.2-0.exe) herunter</li>
+          <li>Erstellen Sie eine Prüfsumme mit:</br>
+            <code>fciv.exe xampp-win32-1.8.2-0.exe</code>
+          </li>
+          <li>Und nun können Sie Ihre Prüfsumme mit der angezeigten Prüfsumme auf der XAMPP_für_Windows-Homepage vergleichen.</li>
+        </ul>
+      </p>
+      <p>Wenn beide Prüfsummen gleich sind, dann ist alles in Ordnung. Wenn nicht, so kann der Download abgebrochen sein oder die Datei wurde verändert.</p>
+      </dd>
+
+      <dt>Warum haben Änderungen in der php.ini keine Auswirkungen?</dt>
+      <dd>
+      <p>Wenn Änderungen in der php.ini keine Wirkung zeigen, so ist es möglich, dass eine andere php.ini benutzt wird. Eine Prüfung kann mit phpinfo() vollzogen werden. Gehen Sie auf die URI http://localhost/xampp/phpinfo.php und suchen Sie nach "Loaded Configuration File". In diesem Eintrag ist der Dateipfad der php.ini abzulesen, der wirklich benutzt wird.</p>
+      <p><strong>Hinweis:</strong> Nach Änderungen in der php.ini ist es wichtig, den Apache neu zu starten, damit der Apache den PHP-Parser veranlasst, die neuen Einstellungen einzulesen.</p>
+      </dd>
+
+      <dt>Hilfe! Hier ist ein Virus im XAMPP!</dt>
+      <dd>
+      <p>Einige Antivirus Programme halten XAMPP für einen Virus, typischerweise mit dem Hinweis auf den XAMPP-Manager.exe. Das ist eine falsche Positiv-Meldung des Antivirus-Programms, das bedeutet, dass das Antivirus-Programm XAMPP irrtümlich als Virus identifiziert hat, obwohl XAMPP keines ist. Bevor wir eine neue Version von XAMPP herausgeben, testen wir sie mit unterschiedlichen Virenscannern, die zu diesem Zeitpunkt aktuell vorhanden sind. Im Augenblick benutzen wir <a href="http://www.kaspersky.com/virusscanner">Kapersky Online Virus Scanner</a>. Sie können auch das Onlinewerkzeug benutzen, <a href="https://www.virustotal.com/">Virus Total</a> um XAMPP zu untersuchen oder Sie senden uns eine E-Mail an security (at) apachefriends (dot) org, wenn Sie ein Problem gefunden haben.</p>
+      </dd>
+
+      <dt>Wie konfiguriere ich mein Antivirusprogramm?</dt>
+      <dd>
+      <p>Wir haben alle zum Ausführen der gebündelten Webanwendung benötigten Server und die damit verbundenen Dateien eingefügt, sie werden also bemerken, dass XAMPP eine große Anzahl an Dateien installiert. Wenn sie eine XAMPP-Anwendung auf einem Windowsrechner mit einem aktiven Antivirusprogramm installieren, dann kann das die Installation merklich verlangsamen und es kann sein, dass einer der Server (Web-Server, Datenbankserver) von der Antivirussoftware blockiert wird. Wenn Sie ein Antivirusprogramm aktiviert haben, prüfen Sie die folgenden Einstellungen, damit XAMPP ohne Leistungseinbußen ausgeführt wird:</p>
+      <p>
+        <ul>
+          <li>Fügen Sie Ausnahmen in der Firewall hinzu: für Apache, MySQL oder jeden weiteren Server.</li>
+          <li>Dateien untersuchen beim Aufruf: Wenn Sie die Virusuntersuchung für alle Dateien aktiviert haben, können die ausführbaren Dateien für den Server langsamer werden.</li>
+          <li>Untersuchen Sie den Verkehr für unterschiedliche URLs: wenn Sie mit XAMPP auf Ihrem eigenen Rechner entwickeln, können Sie den "localhost"-Verkehr in den Antiviruseinstellungen ausschließen.</li>
+        </ul>
+      </p>
+      </dd>
+
+      <dt>Warum startet der Apache Server auf meinem System nicht?</dt>
+      <dd>
+      <p>Dies Problem kann einen von mehrere Gründen habe:</p>
+      <p>
+        <ul>
+          <li>Sie haben mehr als einen HTTP-Server (IIS, Sambar, ZEUS usw.) gestartet. Nur ein Server kann Port 80 verwenden. Diese Fehlermeldung weist auf das Problem hin:<br/>
+<code>(OS 10048)... make_sock: could not bind to adress 0.0.0.0:80
+no listening sockets available, shutting down</code></li>
+          <li>Sie haben eine andere Software wie das Internettelefon "Skype", die auch den Port 80 besetzt. Wenn "Skype" das Problem ist, gehen Sie in Skype auf Aktionen &rarr; Verbindungsoptionen &rarr; Verbindung &rarr; entfernen Sie das Häkchen bei "Ports 80 und 443 für zusätzliche eingehende Verbindungen verwenden" und starten Sie Skype erneut. Jetzt sollte es funktionieren.</li>
+          <li>Sie haben eine Firewall, die den Port von Apache blockiert. Nicht alle Firewalls sind kompatibel mit Apache, und es kommt manchmal vor, dass man die Firewall abschalten muss und wenn das nicht reicht, sogar eine Deinstallation durchführen muss. Diese Meldung zeigt eine Firewallblockade an:<br/>
+<code>(OS 10038)Socket operation on non-socket: make_sock: for address 0.0.0.0:80,
+apr_socket_opt_set: (SO_KEEPALIVE)</code></li>
+        </ul>
+        <p>Auch wenn der Apache gestartet werden kann, aber Ihr Browser kann nicht darauf zugreifen (http://localhost/), so könnte es einen der folgenden Gründe haben:</p>
+        <ul>
+          <li>Einige Virusscanner können das in der gleicher Weise verursachen, wie eine Firewall stören kann.</li>
+          <li>Sie benutzen Windows XP Professional ohne Servicepack 1. Sie müssen wenigstens das Servicepack 1 haben, damit XAMPP funktioniert.</li>
+        </ul>
+      </p>
+      <p><strong>Tipp:</strong> Wenn Sie Probleme mit belegten Ports haben, können Sie das Tool "xampp-portcheck.exe" ausprobieren. Manchmal hilft es.</p>
+      </dd>
+
+      <dt>Warum ist meine CPU-Auslastung mit Apache bei 99%?</dt>
+      <dd>
+      <p>Eines von zwei Szenarien spiel hier ein Rolle. Entweder ihre CPU ist am Limit oder Sie rufen eine Seite auf, sehen aber nichts (das System versucht vergeblich die Seite zu laden). In beiden Fällen können Sie die folgende Nachricht in Ihrer Apache-Logdatei finden:</p>
+      <p><code>Child: Encountered too many AcceptEx faults accepting client connections.
+winnt_mpm: falling back to 'AcceptFilter none'.</code></p>
+      <p>Der MPM fällt zurück in eine sicherere Implementierung, aber einige Clients werden nicht korrekt behandelt. Um diesen Fehler zu vermeiden, setzen Sie "AcceptFilter" mit accept filter "none" in der "\\xampp\\apache\\conf\\extra\\httpd-mpm.conf"-Datei.</p>
+      </dd>
+
+      <dt>Warum werden Bilder und Stylesheets-Formate nicht angezeigt?</dt>
+      <dd>
+      <p>Gelegentlich gibt es Probleme mit der Anzeige von Bildern und Stylesheets, insbesondere wenn diese Dateien auf einem Netzwerklaufwerk liegen. In diesem Fall können Sie eine der folgenden Zeilen in der Datei "\\xampp\\apache\\conf\\httpd.conf" aktivieren (oder hinzufügen):</p>
+      <p><code>EnableSendfile off</br>
+EnableMMAP off</code></p>
+      <p>Das Problem kann auch von Programmen verursacht werden, die die Bandbreite der Übertragung regulieren (z. B. NetLimiter).</p>
+      </dd>
+
+      <dt>How do I send email with XAMPP?</dt>
+      <dd>
+        <p>To configure XAMPP to use the included sendmail.exe binary for email delivery, follow these steps:</p>
+        <ul>
+          <li>Edit the XAMPP "php.ini" file. Within this file, find the [mail function] section and replace it with the following directives. Change the XAMPP installation path if needed.
+          <code>
+          sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+          </code>
+          </li>
+          <li>Edit the XAMPP "sendmail.ini" file. Within this file, find the [sendmail] section and replace it with the following directives:
+          <code>
+          smtp_server=smtp.gmail.com
+          smtp_port=465
+          smtp_ssl=auto
+          error_logfile=error.log
+          auth_username=your-gmail-username@gmail.com
+          auth_password=your-gmail-password
+          </code>
+          <p>Remember to replace the dummy values shown with your actual Gmail address and account password. If you don't plan to use Gmail's SMTP server, replace the SMTP host details with appropriate values for your organization or ISP's SMTP server.</p>
+          </li>
+          <li>Restart the Apache server using the XAMPP control panel.
+          </li>
+        </ul>
+        <p>You can now use PHP's mail() function to send email from your application.</p> 
+      </dd>
+      
+      <dt>Wie kann ich ein root-Passwort für die MySQL-Datenbank setzen?</dt>
+      <dd>
+      <p>Configure it with the "XAMPP Shell" (command prompt). Open the shell from the XAMPP control pane and execute this command:<code>mysqladmin.exe -u root password secret</code>This sets the root password to 'secret'.</p>
+      </dd>
+
+      <dt>Kann ich meinen eigenen MySQL-Server nutzen?</dt>
+      <dd>
+      <p>Ja. Starten Sie einfach nicht den MySQL vom XAMPP-Paket. Bitte beachten Sie, dass nicht zwei Server am gleichen Port lauschen können. Wenn Sie ein Passwort für "root" gesetzt haben, vergessen Sie bitte nicht, die Datei "\\xampp\\phpMyAdmin\\config.inc.php" anzupassen.</p>
+      </dd>
+
+      <dt>Wie schränke ich den Zugriff auf phpMyAdmin von außen ein?</dt>
+      <dd>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
+      <p>Bevor Sie auf den MySQL-Server zugreifen können, wird phpMyAdmin nach einem Benutzernamen und einem Passwort fragen. Vergessen Sie nicht, zuerst ein Passwort für den Benutzer "root" zu setzen.</p>
+      </dd>
+
+      <dt>How do I enable access to phpMyAdmin from the outside?</dt>
+      <dd>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
+      <p>IMPORTANT: Enabling external access for phpMyAdmin in production environments is a significant security risk. You are strongly advised to only allow access from localhost. A remote attacker could take advantage of any existing vulnerability for executing code or for modifying your data.</p>
+      <p>To enable remote access to phpMyAdmin, follow these steps:</p>
+      <ul>
+        <li>Edit the apache\conf\extra\httpd-xampp.conf file in your XAMPP installation directory.</li>
+        <li>Within this file, find the lines below. 
+          <p><code>
+              Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
+              &lt;Directory "C:/xampp/phpMyAdmin"&gt;
+                AllowOverride AuthConfig
+                Require local
+          </code></p>
+        </li>
+        <li>Then replace 'Require local' with 'Require all granted'.</li>
+          <p><code>
+              Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
+              &lt;Directory "C:/xampp/phpMyAdmin"&gt;
+                AllowOverride AuthConfig
+                Require all granted
+          </code></p>
+        <li>Restart the Apache server using the XAMPP control panel.</li>
+      </ul>
+      </dd>
+      
+      <dt>Wo ist der IMAP-Support bei PHP?</dt>
+      <dd>
+      <p>In der Standardeinstellung ist die IMAP-Unterstützung aufgrund einiger mysteriöser Initialisierungsfehler mit einigen Homeversionen wie Windows_98 deaktiviert. Wenn Sie mit NT-Systemen arbeiten, können Sie die Datei "\\xampp\\php\\php.ini" öffnen, damit Sie die PHP-Erweiterung durch Entfernen des Semikolons am Beginn der Zeile ";extension=php_imap.dll" aktivieren können. Es sollte sein:</br>
+<code>extension=php_imap.dll</code></p>
+      <p>Jetzt starten Sie den Apache neu und IMAP sollte funktionieren. Sie können die gleichen Schritte für alle Erweiterungen anwenden, die in der Standardeinstellung nicht aktiviert sind.</p>
+      </dd>
+
+      <dt>Warum funktionieren einige PHP-open-source-Anwendungen nicht mit XAMPP für Windows?</dt>
+      <dd>
+      <p>Viele PHP-Anwendungen oder Erweiterungen, die für Linux geschrieben worden sind, wurden nicht auf Windows übertragen. </p>
+      </dd>
+
+      <dt>Kann ich das Verzeichnis "install" nach der Installation löschen?</dt>
+      <dd>
+      <p>Besser nicht. Die Skripten darin werden noch für alle Zusatzpakete (add-ons) und Upgrades von XAMPP gebraucht.</p>
+      </dd>
+
+      <dt>Wie aktiviere ich den eAccelerator?</dt>
+      <dd>
+      <p>Wie andere (Zend-) Erweiterungen können Sie sie in in der "php.ini"-Datei aktivieren. Aktivieren Sie in dieser Datei die Zeile ";zend_extension = "\\xampp\\php\\ext\\php_eaccelerator.dll". Es sollte sein:</br>
+<code>zend_extension = "\xampp\php\ext\php_eaccelerator.dll"</code></p>
+      </dd>
+
+      <dt>Wie behebe ich Verbindungsfehler zum MS_SQL-Server?</dt>
+      <dd>
+      <p>Wenn die mssql-Erweiterung in der php.ini geladen wird, erscheinen gelegentlich Probleme, wenn nur TCP/IP benutzt wird. Sie können das Problem mit einer neueren Version der "ntwdblib.dll" von Microsoft lösen. Bitte ersetzen Sie die ältere Datei in "\\xampp\\apache\\bin" und "\\xampp\\php" mit der neueren. Wegen der Lizenz können wir nicht selbst eine neuere Version mit XAMPP ausliefern.</p>
+      </dd>
+
+      <dt>Wie arbeite ich mit der PHP-mcrypt-Erweiterung?</dt>
+      <dd>
+      <p>Dafür haben wir einen Betreff im Forum mit Beispielen und möglichen Lösungen geöffnet: <a href="https://community.apachefriends.org/f/viewtopic.php?t=3012">MCrypt-Eintrag</a></p>
+      </dd>
+
+      <dt>Do Microsoft Active Server Pages (ASP) work with XAMPP?</dt>
+      <dd>
+      <p>Nein. Und Apache::ASP mit dem Perl_ Add-On ist nicht das Gleiche. Apache::ASP kennt nur Perl-Skripten, wohingegen ASP des Internet-Information-Servers (IIS) auch normales VBScript beherrscht. Allerdings ist ein Apache-Modul für APS .NET von einem Drittanbieter verfügbar.</p>
+      </dd>
+
+      <dt>How can I get XAMPP working on port 80 under Windows 10?</dt>
+      <dd>
+      <p>By default, Windows 10 starts Microsoft IIS on port 80, which is the same default port used by Apache in XAMPP. As a result, Apache cannot bind to port 80.</p>
+      <p>To deactivate IIS from running on port 80, follow these steps:</p>
+      <ul>
+        <li>Open the Services panel in Computer Management.</li>
+        <li>Search for the 'World Wide Web Publishing Service' and select it.</li>
+        <li>Click the link to 'Stop the service'.</li>
+        <li>Double-click the service name.</li>
+        <li>In the 'Startup type' field, change the startup type to 'Disabled'.</li>
+        <li>Click 'OK' to save your changes.</li>
+      </ul>
+      <p>You should now be able to start Apache in XAMPP on port 80.</p>
+      <p>For more information, refer to the 'Troubleshoot Apache Startup Problems' guide included with XAMPP or <a href='https://community.apachefriends.org/f/viewtopic.php?f=16&t=71620'>this forum post</a>.</p>
+      </dd>
+      
+      <dt>How can I use Microsoft Edge to access local addresses under Windows 10?</dt>
+      <dd>
+      <p>If your local machine has the host name 'myhost', you will not be able to access URLs such as http://myhost in Microsoft Edge. To resolve this, you should instead use the addresses http://127.0.0.1 or http://localhost.</p>
+      </dd>
+
+      <dt>Where are the main XAMPP configuration files?</dt>
+      <dd>
+        <p>The main XAMPP configuration files are located as follows:</p>
+        <ul>
+          <li>Apache configuration file: \xampp\apache\conf\httpd.conf, \xampp\apache\conf\extra\httpd-xampp.conf</li>
+          <li>PHP configuration file: \xampp\php\php.ini</li>
+          <li>MySQL configuration file: \xampp\mysql\bin\my.ini</li>
+          <li>FileZilla Server configuration file: \xampp\FileZillaFTP\FileZilla Server.xml</li>
+          <li>Apache Tomcat configuration file: \xampp\tomcat\conf\server.xml</li>
+          <li>Apache Tomcat configuration file: \xampp\sendmail\sendmail.ini</li>
+          <li>Mercury Mail configuration file: \xampp\MercuryMail\MERCURY.INI</li>
+        </ul>
+      </dd>
+
+    </dl>
+  </div>
+</div>
+
+    </div>
+
+    <footer class="footer row">
+      <div class="columns">
+        <div class="footer_lists-container row collapse">
+          <div class="footer_social columns large-2">
+            <ul class="social">
+  <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
+  <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+</ul>
+
+            <p class="footer_copyright">Copyright (c) 2022, Apache Friends</p>
+          </div>
+          <ul class="footer_links columns large-9">
+            <li><a href="https://www.apachefriends.org/blog.html">Blog</a></li>
+            <li><a href="/privacy_policy.html">Datenschutzbestimmungen</a></li>
+            <li>
+<a target="_blank" href="http://www.fastly.com/">                CDN bereitgestellt durch
+                <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/dashboard/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>

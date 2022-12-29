@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>XAMPP FAQs for Windows</title>
+
+    <meta name="description" content="Instructions on how to install XAMPP for Windows distributions." />
+    
+
+    <link href="/dashboard/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/dashboard/stylesheets/all-rtl.css" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/dashboard/javascripts/modernizr.js" type="text/javascript"></script>
+
+
+    <link href="/dashboard/images/favicon.png" rel="icon" type="image/png" />
+
+
+  </head>
+
+  <body class="ur ur_faq">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <header class="header contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/dashboard/ur/index.html">Apache Friends</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#">
+              <span>Menu</span>
+            </a>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Left Nav Section -->
+          <ul class="left">
+              <li class="item active"><a href="/dashboard/ur/faq.html">اکثر پوچھے گئے سوالات</a></li>
+              <li class="item "><a href="/dashboard/ur/howto.html">HOW-TO Guides</a></li>
+              <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class="item "><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="hero">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Windows <span>عمومی سوالات</span></h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="large-8 columns">
+    <dl class="accordion">
+      <dt>میں کس طرح XAMPP کو انسٹال کروں ؟</dt>
+      <dd>
+      <p>ونڈوز کے لیے xampp کی تین مختلف ذائقوں میں موجود ہے:</p>
+      <p>انسٹالر<br />
+      شاید xampp کی نصب کرنے کے لئے سب سے آسان طریقہ.</p>
+      <p>ZIP:<br />
+      purists کے لئے: xampp کی عام زپ محفوظ شدہ دستاویزات.</p>
+      <p>7zip:<br />
+      XAMPP کی 7zip محفوظ شدہ دستاویزات کے طور پر: کم بینڈوڈتھ کے ساتھ purists کے لئے.</p>
+      <p>نوٹ: اگر آپ فائلوں کو ہٹا دیں، تو، جھوٹے مثبت وائرس انتباہ ہو سکتا ہے.</p>
+      <p><strong>انسٹالر استعمال کرتے ہوئے:</strong></p>
+      <p></p>
+      <p>XAMPP کنٹرول پینل Apache, MySQL, FileZilla & Mercury کو شروع کرنے یا روکنے کے لئے یا ان سرورز کو سروس کے طور پر انسٹال کرنے کے لئے استعمال کرتے ہیں</p>
+      <p><strong>زپ کی طرف سے نصب</strong></p>
+      <p>آپ کی پسند کا فولڈر میں ZIP ابلیھاگار ان زپ. منتخب شدہ ہدف کی ڈائرکٹری ذیل: "xampp\C:" XAMPP کی ذیری ڈائریکٹری پر نکالنے ہے. اب آپ کا سسٹم پر XAMPP کی ترتیب کو ایڈجسٹ کرنے کے لئے، فائل "setup_xampp.bat" شروع.</p>
+      <p>آپ کو ایک روٹ ڈائریکٹری "C:\" کا انتخاب کرتے ہیں ہدف کے طور پر، آپ کو "setup_xampp.bat" شروع نہیں ہونا چاہیے.</p>
+      <p>انسٹالر کے ورژن کے ساتھ کی طرح، آپ کو اب اضافی کاموں کے لئے "XAMPP کی کنٹرول پینل" استعمال کر سکتے ہیں.</p>
+      </dd>
+      <dt>Does XAMPP include MySQL or MariaDB?</dt>
+      <dd>
+      <p>Since XAMPP 5.5.30 and 5.6.14, XAMPP ships MariaDB instead of MySQL. The commands and tools are the same for both.</p>
+      </dd>
+      <dt>میں کس طرح سیٹ اپ کے بغیر XAMPP کی شروع کر سکتے ہیں؟</dt>
+      <dd>
+      <p>اگر آپ XAMPP کو اعلی سطحی فولڈر جیسا کہ ,"C:\\" or "D:\\" میں ڈالیں تو آپ بہت سی سروسز جیسا کہ Apeche اور MySQL براہراست شروع کر سکتے ہیں "setup_xampp.bat" اس فائل کو چلاے بغیر .</p>
+      <p>آپ کو ایک یوایسبی ڈرائیو پر XAMPP کی نصب کر رہے ہیں تو سیٹ اپ سکرپٹ کا استعمال کرتے ہوئے، یا سیٹ اپ سکرپٹ میں رشتہ دار کے راستے کا انتخاب نہیں، ترجیح دی جاتی ہے. ہر کمپیوٹر پر اس طرح کی ایک ڈرائیو ایک دوسرے ڈرائیو خط ہے کر سکتے ہیں. آپ سیٹ اپ سکرپٹ کے ساتھ کسی بھی وقت رشتہ دار راستے پر مطلق کی طرف سے تبدیل کر سکتے ہیں.</p>
+      <p>ہمارے ڈاؤن لوڈ کے صفحے سے انسٹالر استعمال کرتے ہوئے XAMPP کی نصب کرنے کے لئے کا سب سے آسان طریقہ ہے. XAMPP کی | پروگرام | تنصیب مکمل ہونے کے بعد، آپ کو شروع کرنے کے تحت XAMPP کی مل جائے گا. آپ / شروع تمام سرور کو روکنے کے اور بھی / انسٹال کی خدمات کو انسٹال کرنے کے XAMPP کی کنٹرول پینل استعمال کر سکتے ہیں.</p>
+      <p>XAMPP کنٹرول پینل Apache, MySQL, FileZilla & Mercury کو شروع کرنے یا روکنے کے لئے یا ان سرورز کو سروس کے طور پر انسٹال کرنے کے لئے استعمال کرتے ہیں</p>
+      </dd>
+      <dt>میں کس طرح شروع کرنے اور XAMPP کی روک سکتا ہوں؟</dt>
+      <dd>
+      <p>عالمی کنٹرول سینٹر "XAMPP کی کنٹرول پینل" (شکریہ www.nat32.com) ہے. اس کے ساتھ شروع کر دیا ہے:</p>
+      <p><code>\xampp\xampp-control.exe</code></p>
+      <p>تم نے بھی سرور کو روکنے / شروع کرنے کے لئے کچھ batchfiles استعمال کر سکتے ہیں:</p>
+      <p>
+      <ul>
+        <li>اپاچی اور مائی ایس کیو ایل شروع:
+        <code>\xampp\xampp_start.exe</code></li>
+        <li>اپاچی اور مائی ایس کیو ایل سٹاپ:
+        <code>\xampp\xampp_stop.exe</code></li>
+        <li>اپاچی شروع:
+        <code>\xampp\apache_start.bat</code></li>
+        <li>اپاچی سٹاپ:
+        <code>\xampp\apache_stop.bat</code></li>
+        <li>ایس کیو ایل شروع:
+        <code>\xampp\mysql_start.bat</code></li>
+        <li>ایس کیو ایل سٹاپ:
+        <code>\xampp\mysql_stop.bat</code></li>
+        <li>مرکری Mailserver شروع:
+        <code>\xampp\mercury_start.bat</code></li>
+        <li>مرکری Mailserver سٹاپ:
+        <code>\xampp\mercury_stop.bat</code></li>
+        <li>FileZilla کے سرور شروع:
+        <code>\xampp\filezilla_start.bat</code></li>
+        <li>FileZilla کے سرور سٹاپ:
+        <code>\xampp\filezilla_stop.bat</code></li></ul></p>
+      </p>
+      </dd>
+      <dt>میں کس طرح جانچ سکتا ہوں کہ سب چیزوں نے کام کیا ؟</dt>
+      <dd>
+      <p>آپ اپنے پسندیدہ ویب براؤزر میں مندرجہ ذیل یو آر ایل لکھیں :</p>
+      <p><code>http://localhost/</code> یا  <code>http://127.0.0.1/</code> </p>
+      <p>You should see the XAMPP start page, as shown below.</p>
+        <img src="/dashboard/images/screenshots/xampp-windows-start.jpg" />
+      </dd>
+      <dt>میں کس طرح ایک خدمت کے طور پر ایک سرور انسٹال کر سکتے ہیں؟</dt>
+      <dd>
+      <p>xampp کی میں ہر سرور آپ ونڈوز خدمت کے طور پر بھی انسٹال کر سکتے ہیں. تم نے بھی xampp کی کنٹرول پینل سے انسٹال کر سکتے ہیں. اس صورت میں یہ ایڈمنسٹریٹر کی سہولیات کے ساتھ سکرپٹ یا کنٹرول پینل کو چلانے کے لئے ضروری ہے.</p>
+      <p>اپاچی سروس انسٹال کریں: xampp\\apache\\apache_installservice.bat\\</p>
+      <p>Apache سروس انسٹال کریں : xampp\\apache\\apache_uninstallservice.bat\\ </p>
+      <p>ایس کیو ایل سروس انسٹال کریں: \\xampp\\mysql\\mysql_installservice.bat </p>
+      <p>ایس کیو ایل سروس انسٹال:  \\xampp\\mysql\\mysql_uninstallservice.bat </p>
+      <p>FileZilla کے خارج انسٹال کریں: \\xampp\\filezilla_setup.bat </p>
+      <p>مرکری: کوئی سروس کی تنصیب دستیاب</p>
+      </dd>
+      <dt>کیا XAMPP کی پیداوار تیار ہے؟</dt>
+      <dd>
+      <p>XAMPP صرف ترقی کے ماحول کے لئے ہی نہیں ترتیب دیا گیا ہے، لیکن . XAMPP کو جس طرح وہ  چاہتا / چاہتی ہے ڈویلپر کچھ بھی اجازت دینے کے لئے ہر ممکن حد تک کھلا ہے. ترقی کے ماحول کے لئے یہ بہت اچھا ہے لیکن پیداوار کے ماحول میں یہ مہلک ہو سکتا ہے.</p>
+      <p>یہاں XAMPP کی لاپتہ سلامتی کی فہرست:</p>
+      <ol>
+        <li>مائی ایس کیو ایل کے منتظم (جڑ)/ (root) کا کوئی پاسوڑد نہیں ہے.</li>
+        <li>مائی ایس کیو ایل ڈیمان نیٹ ورک کے ذریعے قابل رسائی ہے.</li>
+        <li>ProFTPD uses the password "lampp" for user "daemon".</li>
+        <li>مرکری اور FileZilla کے پہلے سے طے شدہ صارفین کے نام سے جانا جاتا.</li>
+      </ol>
+      <p>تمام پوائنٹس کی ایک بہت بڑی سیکورٹی رسک ہو سکتا ہے. XAMPP کی آپ کے LAN کے باہر نیٹ ورک اور لوگوں کے ذریعے قابل رسائی ہے خاص طور پر اگر. یہ بھی ایک فائر وال یا ایک (NAT) روٹر استعمال کرنے کے لئے مدد کر سکتے ہیں. ایک روٹر یا فائروال کے معاملے میں، آپ کے کمپیوٹر کو عام طور پر نیٹ ورک کے ذریعے قابل رسائی نہیں ہے. یہ ان مسائل کو ٹھیک کرنے کے لئے آپ پر منحصر ہے. ایک چھوٹی سی مدد کے طور پر "XAMPP کی سیکورٹی کنسول" ہے.</p>
+      <p>آن لائن کچھ بھی شائع کرنے سے پہلے XAMPP کی محفوظ کریں. فائروال یا ایک بیرونی روٹر سیکورٹی کی کم سطح کے لئے صرف کافی ہیں. تھوڑا سا زیادہ حفاظت کے لئے، آپ کو "XAMPP کی سیکورٹی کنسول" چلانے اور پاس ورڈ تفویض کر سکتے ہیں.</p>
+      <p>آپ انٹرنیٹ سے آپ XAMPP کی قابل رسائی ہے کرنا چاہتے ہیں تو، آپ کو کچھ مسائل کو ٹھیک کر سکتے ہیں جو مندرجہ ذیل URI کو جانا چاہئے:</p>
+      <p><code> http://localhost/security/</code></p>
+      <p>سیکورٹی کنسول کے ساتھ آپ ایس کیو ایل صارف "جڑ" اور phpMyAdmin کے لئے ایک پاس ورڈ مقرر کر سکتے ہیں. تم نے بھی xampp کی demopages کے لئے ایک کی توثیق چالو کر سکتے ہیں.</p>
+      <p>یہ ویب کی بنیاد پر آلے کے کسی بھی اضافی سیکورٹی کے مسائل حل نہیں ہے! خاص طور پر FileZilla کے FTP سرور اور مرکری میل سرور آپ کو اپنے آپ کو محفوظ کرنا ضروری ہے.</p></dd>
+      <dt>میں کس طرح اپنے کمپیوٹر سے xampp کی خارج کروں؟</dt>
+      <dd>
+      <p>آپ انسٹالر ورژن استعمال XAMPP کی نصب، کی Uninstaller استعمال کریں. کی Uninstaller آپ کی رجسٹری کی طرف سے تمام XAMPP کی اندراجات کو خارج کر دیں اور اس کے ساتھ XAMPP شامل کچھ نصب خدمات انسٹال کیا جائے گا. ہم انتہائی اگر انسٹالر version.Please بیک اپ سے آپ XAMPP کی ناتنصیب سے پہلے رکھنا چاہتے ہیں تمام اعداد و شمار XAMPP کی تنصیبات کے دور کرنے کے لئے انسٹال پروگرام استعمال کرتے ہیں مشورہ ہے کہ.</p>
+      <p>آپ کو زپ اور 7zip ورژن کا استعمال کرتے ہوئے XAMPP کی نصب، تمام XAMPP کی سرورز کو بند اور تمام پینل سے باہر نکلیں. آپ کو کسی بھی خدمات نصب، انسٹال کریں اور انہیں بھی بند. اب صرف XAMPP کی نصب کیا جاتا ہے، جہاں پورے فولڈر کو خارج. صاف کرنے کے لئے کوئی رجسٹری اندراجات اور کوئی ماحول متغیر ہیں.</p>
+      </dd>
+      <dt>XAMPP کی کی "واپس موضوع پر" ورژن کیا ہے؟</dt>
+      <dd>
+      <p>XAMPP کی واپس موضوع پر ("ہلکے وزن" میں کے طور پر "روشنی" کا مطلب ہے) صرف پی ایچ پی اور MySQL کا استعمال کرتے ہوئے فوری کام کے لئے سفارش کی جاتی ہے جس میں XAMPP کی اجزاء، کی ایک چھوٹی بنڈل ہے. اس طرح پارا میل اور FTP FileZilla کے طور پر کچھ سرورز یا فورم کے اوزار واپس موضوع پر ورژن میں یاد کر رہے ہیں.</p>
+      </dd>
+      <dt>میں اپنے ویب کے مواد کی جگہ چاہئے؟</dt>
+      <dd>
+      <p>تمام ورلڈ وائڈ ویب دستاویزات کے لئے اہم ڈائریکٹری xampp\\htdocs\\ ہے. اگر آپ ایک فائل "test.html" اس ڈائریکٹوری میں ڈالیں, تو آپ اس تک رسائی حاصل کر سکتے ہیں"URI "http://localhost/test.html اس کے ساتھ .</p>
+      <p>اور "test.php"؟ صرف "http://localhost/test.php" کا استعمال. ایک سادہ testscript ہو سکتا ہے:</p>
+      <p><code>&lt;?php<br />
+        echo 'Hello world'; <br />
+        ?&gt;</code></p>
+      <p>آپ کی ویب کے لئے ایک نئی ذیلی ڈائریکٹری؟ صرف ایک نئی ڈائریکٹری بنایں ("e.g. "new) ڈائریکٹری کے اندر "xampp\\htdocs\\" ایک ٹیسٹ فائل بنایں اور اس سے رسائی حاصل کریں "http://localhost/new/test.php".</p>
+      <p><strong>مزید تفصیلات</strong></p>
+      <p>HTML:<br>
+      کارکردگی: \xampp\htdocs<br>
+      ختم اجازت: .html .htm<br>
+      => بنیادی پیکیج</p>
+      <p>SSI:<br>
+      کارکردگی: \xampp\htdocs<br>
+      ختم اجازت: .shtml<br>
+      => بنیادی پیکیج</p>
+      <p>CGI:<br>
+      کارکردگی: \xampp\htdocs and \xampp\cgi-bin<br>
+      ختم اجازت: .cgi<br>
+      => بنیادی پیکیج</p>
+      <p>PHP:<br>
+      کارکردگی: \xampp\htdocs and \xampp\cgi-bin<br>
+      ختم اجازت: .php<br>
+      => بنیادی پیکیج</p>
+      <p>Perl:<br>
+      کارکردگی: \xampp\htdocs and \xampp\cgi-bin<br>
+      ختم اجازت: .pl<br>
+      => بنیادی پیکیج</p>
+      <p>Apache::ASP Perl:<br>
+      کارکردگی: \xampp\htdocs<br>
+      ختم اجازت: .asp<br>
+      => بنیادی پیکیج</p>
+      <p>JSP Java:<br>
+      کارکردگی: \xampp\tomcat\webapps\java (e.g.)<br>
+      ختم اجازت: .jsp<br>
+      => Tomcat add-on</p>
+      <p>Servlets Java:<br>
+      کارکردگی: \xampp\tomcat\webapps\java (e.g.)<br>
+      ختم اجازت: .html (u.a)<br>
+      => Tomcat add-on</p>
+      </dd>
+      <dt>میں XAMPP کی تنصیب منتقل کر سکتے ہیں؟</dt>
+      <dd>
+      <p>جی ہاں. XAMPP کی ڈائریکٹری کے منتقل کرنے کے بعد، آپ "setup_xampp.bat" عملدرآمد ضروری ہے. ترتیب فائل میں راستے اس قدم کے ساتھ ایڈجسٹ کیا جائے گا.</p>
+      <p>آپ کو ونڈوز سروس کے طور پر کسی بھی سرور انسٹال کیا ہے تو آپ کو پہلے ونڈوز سروس ہٹانے کے، اور ضروری ہے کے بعد آپ کو دوبارہ سروس انسٹال کر سکتے ہیں منتقل.</p>
+      <p>انتباہ: آپ کے اپنے سکرپٹ کی طرف سے ترتیب فائل، پی ایچ پی کی ایپلی کیشنز کی طرح، ایڈجسٹ نہیں کر رہے ہیں. لیکن یہ انسٹالر کے لئے ایک "پلگ ان" لکھنے کے لئے ممکن ہے. اس طرح کے ایک پلگ ان کے ساتھ، انسٹالر بھی اس طرح کی فائلوں کو ایڈجسٹ کر سکتے ہیں.</p>
+      </dd>
+      <dt>دیکھیے ورلڈ وائڈ ویب ڈائریکٹریز کے لئے "خود کار طریقے سے شروع کے صفحات" کیا ہیں؟</dt>
+      <dd>
+      <p>اپاچی تقریب "DirectoryIndex" کے لئے معیاری فائل کا نام "index.html" یا "index.php کو" ہے. آپ کو صرف ایک فولڈر (مثال کے طور پر "http://localhost/xampp/") پر براؤزنگ کر رہے ہیں، اور اپاچی اس طرح ایک فائل تلاش کر سکتے ہیں ہر وقت، اپاچی اس فائل کی بجائے ایک ڈائرکٹری کی لسٹنگ کی نمائش ہے.</p>
+      </dd>
+      <dt>میں کہاں ترتیب تبدیل کر سکتے ہیں؟</dt>
+      <dd>
+      <p>تقریبا XAMPP کی میں تمام ترتیبات آپ کو ترتیب فائل کے ساتھ تبدیل کر سکتے ہیں. بس ایک textedit میں فائل کو کھولنے اور آپ چاہتے ہیں کی ترتیب کو تبدیل. صرف FileZilla کے اور مرکری کی درخواست کی تشکیل کے آلے کے ساتھ ترتیب دیا جانا چاہئے.</p>
+      </dd>
+
+      <dt>کیوں XAMPP کی Windows XP SP2 پر کام نہیں کر سکتے ہیں؟</dt>
+      <dd>
+      <p>مائیکروسافٹ خود کار طریقے سے شروع ہوتا ہے جس سروس پیک 2 (SP2)، کے ساتھ ایک بہتر فائروال فراہم کرتا ہے. یہ فائروال اب بلاکس کے لئے ضروری بندرگاہوں 80 (HTTP) اور 443 (HTTPS) اور اپاچی شروع نہیں کر سکتے.</p>
+      <p><strong>سب سے تیز حل:</strong></p>
+      <p>ٹول بار کے ساتھ مائیکروسافٹ فائر وال کو غیر فعال اور XAMPP کی زیادہ onces شروع کرنے کی کوشش کریں. بہتر حل سلامتی کے مرکز کے اندر اندر ایک رعایت کی وضاحت کرنے کے لئے ہے.</p>
+      <p><strong>مندرجہ ذیل بندرگاہوں کے بنیادی فعالیت کے لئے استعمال کیا جاتا ہے:</strong></p>
+      <p>Apache (HTTP): Port 80<br/>
+        Apache (WebDAV): Port 81</br>
+        Apache (HTTPS): Port 443</br>
+        MySQL: Port 3306</br>
+        FileZilla (FTP): Port 21</br>
+        FileZilla (Admin): Port 14147</br>
+        Mercury (SMTP): Port 25</br>
+        Mercury (POP3): Port 110</br>
+        Mercury (IMAP): Port 143</br>
+        Mercury (HTTP): Port 2224</br>
+        Mercury (Finger): Port 79</br>
+        Mercury (PH): Port 105</br>
+        Mercury (PopPass): Port 106</br>
+        Tomcat (AJP/1.3): Port 8009</br>
+        Tomcat (HTTP): Port 8080</p>
+      </dd>
+
+      <dt>کیوں XAMPP کی Vista پر کام نہیں کرتا؟</dt>
+      <dd>
+      <p><strong>یوزر اکاؤنٹ کنٹرول (UAC)</strong></p>
+      <p>ڈائریکٹری "C: \\ \\ پروگرام فائلیں" میں آپ بھی ایڈمن کے طور پر، مکمل لکھنا استحقاق نہیں ہے. یا آپ کو صرف محدود استحقاق ہے (کے لئے مثال کے طور پر ". \\ \\ xampp کی \\ \\ htdocs"). اس صورت میں آپ کو ایک فائل میں ترمیم نہیں کر سکتے ہیں.</br>
+<strong>حل:</strong> ایکسپلورر کے اندر اندر آپ کی مراعات میں اضافہ (دائیں / سیکورٹی کلک کریں) یا صارف کے اکاؤنٹ کنٹرول (UAC) کو غیر فعال.</p>
+      <p>آپ میں اپاچی / ایس کیو ایل انسٹال کیا ہے "C: \\ \\ xampp کی" ونڈوز سروس کے طور پر. لیکن آپ کو "xampp کی کنٹرول پینل" کے ساتھ خدمات روکنے / شروع نہیں کر سکتے یا ان انسٹال نہیں کر سکتے ہیں.</br></br>
+<strong>حل:</strong> ونڈوز یا غیر فعال UAC سے سروس منیجمنٹ کنسول استعمال کرتے ہیں.</p>
+      <p><strong>یوزر اکاؤنٹ کنٹرول (UAC) غیر فعال</strong></p>
+      <p>UAC کو غیر فعال کرنے کے لئے "msconfig" پروگرام استعال کریں. "msconfig" میں "Tools" میں جایں اور سلیکٹ "disable user account control" اور انتخاب کی توثیق کریں.اب آپکو لازمی Windows دوبارہ شروع کرنا پڑے گی پھر آپ دوبارہ UAC فعال کر سکتے ہیں.</p>
+      </dd>
+
+      <dt>میں کس طرح MD5 حیض چیک کروں؟</dt>
+      <dd>
+      <p>فائلوں کا آپس میں موازنہ کرنے کے لئے، اکثر checksums کے استعمال کیا جاتا ہے. اس حیض MD5 (پیغام ڈائجسٹ الگورتھم 5) بنانے کے لئے ایک معیار.</p>
+      <p>XAMPP کی پیکیج کے آپ کے ڈاؤن لوڈ، اتارنا درست ہے یا نہیں ہے اگر یہ MD5 حیض کے ساتھ آپ کو، ٹیسٹ کر سکتے ہیں. کورس کے آپ ان checksums کے تشکیل دے سکتے ہیں جس میں ایک پروگرام کی ضرورت ہے. Windows کے لیے آپ کو مائیکروسافٹ کی طرف سے ایک آلے کا استعمال کر سکتے ہیں:</p>
+      <p><a href="http://support.microsoft.com/kb/841290">دستیابی اور فائل حیض سالمیت ستیاپک افادیت کی تفصیل</a></p>
+      <p>یہ GNU md5sum طرح، MD5 checksums کے تشکیل دے سکتے ہیں جو کسی بھی دوسرے پروگرام کا استعمال بھی ممکن ہے.</p>
+      <p>آپ اس طرح کے ایک پروگرام (مثال کے طور fciv.exe) نصب ہے، آپ کو مندرجہ ذیل اقدامات کر سکتے ہیں:</p>
+      <p>
+        <ul>
+          <li>Download XAMPP (f.e. xampp-win32-1.8.2-0.exe)</li>
+          <li>کے ساتھ حیض تشکیل دیں:</br>
+            <code>fciv.exe xampp-win32-1.8.2-0.exe</code>
+          </li>
+          <li>اور اب آپ کو آپ کے Windows ایم کے لئے XAMPP کی پر تلاش کر سکتے ہیں ہے کہ ایک کے ساتھ اس حیض موازنہ کر سکتے ہیں.</li>
+        </ul>
+      </p>
+      <p>دونوں checksums کے برابر ہیں، تو سب ٹھیک ہے. اگر نہیں تو، ڈاؤن لوڈ، اتارنا ٹوٹ جاتا ہے یا فائل کو تبدیل کر دیا گیا ہے.</p>
+      </dd>
+
+      <dt>کیوں میرے php.ini میں تبدیلی کا اثر نہیں لیا ہے؟</dt>
+      <dd>
+      <p>اگر "php.ini" میں تبدیلی کوئی اثر نہیں ہے، تو یہ ہو سکتا ہے کہ PHP کی ایک مختلف استعمال کر رہا ہو . آپ ()phpinfo کے ساتھ اس بات کی تصدیق کر سکتے ہیں. URI http://localhost/xampp/phpinfo.php پر جائیں اور "Loaded Configuration File" کے لئے تلاش کریں. یہ قدر آپ "php.ini" PHP کی واقعی استعمال کر رہا ہے سے پتہ چلتا ہے.</p>
+      <p><strong>نوٹ:</strong> فائل "php.ini" آپکو Apache دوبارہ سٹارٹ کرنا ہو گا تاکہ Apache/PHP نئی تبدیلیوں کو پڑھ سکے.</p>
+      </dd>
+
+      <dt>مدد کرو! XAMPP کی میں ایک وائرس ہے!</dt>
+      <dd>
+      <p>Some antivirus programs mistake XAMPP for a virus, typically flagging the file xampp-manager.exe This is a false positive meaning that the antivirus erroneously identified it as a virus, when it is not. Before we release each new version of XAMPP we run it through virus scanning software. At the moment we are using <a href="http://www.kaspersky.com/virusscanner">Kapersky Online Virus Scanner</a>. You can also use the online tool <a href="https://www.virustotal.com/">Virus Total</a> for scanning XAMPP or send us an email to security (at) apachefriends (dot) org if you find any issue.</p>
+      </dd>
+
+      <dt>میں کس طرح اپنے ینٹیوائرس درخواست کی تشکیل کرتے ہیں؟</dt>
+      <dd>
+      <p>ہم بنڈل ویب ایپلیکیشن کو چلانے کے لئے ضروری تمام dependences اور سرور شامل ہے، تو آپ XAMPP کی فائلوں کی بڑی تعداد میں انسٹال ہے مل جائے گا. آپ کو فعال ایک ینٹیوائرس اپلی کیشن کے ساتھ ایک Windows مشین پر ایک XAMPP کی درخواست کو انسٹال کر رہے ہیں تو، یہ نمایاں طور پر کی تنصیب کو سست کر سکتے ہیں، اور (ویب سرور، ڈیٹا بیس سرور) کے سرورز کی ایک ینٹیوائرس سافٹ ویئر کی طرف سے بلاک کیا جا سکتا ہے کا ایک موقع بھی ہے . آپ کو فعال ایک ینٹیوائرس آلے کے ہے، کارکردگی کے مسائل کے بغیر XAMPP کی کو چلانے کے لئے مندرجہ ذیل ترتیبات چیک کریں:</p>
+      <p>
+        <ul>
+          <li>Apache، MySQL یا کسی دوسرے سرور کے لئے: فصیل میں مستثنیات شامل کریں.</li>
+          <li>عمل جب فائلوں کو اسکین: آپ تمام فائلوں کے لئے ینٹیوائرس سکین فعال ہے تو، سرورز کے لئے فائلوں کو سست کر سکتے ہیں.</li>
+          <li>مختلف یو آر ایل کے لئے ٹریفک سکین کریں: آپ کو آپ کے اپنے مشین پر ساتھ XAMPP ترقی کر رہے ہیں، تو آپ ینٹیوائرس کی ترتیبات میں "لوکل ہوسٹ" ٹریفک خارج کر سکتے ہیں.</li>
+        </ul>
+      </p>
+      </dd>
+
+      <dt>کیوں Apache سرور اپنے سسٹم پر شروع نہیں ہے؟</dt>
+      <dd>
+      <p>یہ مسئلہ کئی وجوہات میں سے ایک ہو سکتا ہے:</p>
+      <p>
+        <ul>
+          <li>آپ کو زیادہ تو ایک HTTP سرور (تو IIS، سانبھر، Zeus اور) شروع کر دیا ہے. صرف ایک سرور پورٹ 80 استعمال کر سکتے ہیں. خامی کا یہ پیغام مسئلہ کی طرف اشارہ ہے:<br/>
+<code>(OS 10048)... make_sock: could not bind to adress 0.0.0.0:80
+no listening sockets available, shutting down</code></li>
+          <li>تم نے اس طرح انٹرنیٹ ٹیلی فون "اسکائپ" بھی ہے جس کے بلاکس پورٹ 80 کے طور پر دوسرے سافٹ ویئر، ہے. > "ایک متبادل پورٹ کے لئے استعمال پورٹ 80" میں نشان ہٹا دیں اور اسکائپ دوبارہ شروع - کنکشن> -> اختیارات - مسئلہ "اسکائپ" ہے تو، آپ کے عوامل کو Skype میں جا سکتے ہیں. اب یہ کام کرنا چاہئے.</li>
+          <li>آپ کو ایک فائر وال جس بلاکس Apache بندرگاہ ہے. تمام فائر والز Apache ساتھ ہم آہنگ ہیں، اور کبھی کبھی فائر وال غیر تابکار کافی نہیں ہے اور آپ اس تنصیب ربائی کریں ضروری ہے. خامی کا یہ پیغام ایک فائروال کی طرف اشارہ:<br/>
+<code>(OS 10038)Socket operation on non-socket: make_sock: for address 0.0.0.0:80,
+apr_socket_opt_set: (SO_KEEPALIVE)</code></li>
+        </ul>
+        <p>Apache شروع کر سکتے ہیں، لیکن آپ کے براؤزر میں اس سے رابطہ قائم نہیں کر سکتے ہیں اس کے علاوہ مندرجہ ذیل میں سے ایک کی وجہ سے ہو سکتا ہے:</p>
+        <ul>
+          <li>کچھ وائرس سکینر فائر والز مداخلت کر سکتے ہیں اسی طرح ہے کہ میں اس وجہ سے کر سکتے.</li>
+          <li>آپ سروس پیک 1 کے بغیر ایکس پی پروفیشنل ہے. آپ XAMPP کی کم از کم SP1 ہونا ضروری ہے.</li>
+        </ul>
+      </p>
+      <p><strong>ٹپ:</strong> If you have problems with used ports, you can try the tool "xampp-portcheck.exe". Maybe it can help.</p>
+      </dd>
+
+      <dt>کیوں اپاچی کے لئے اپنے CPU لوڈ تقریبا 99٪ ہے؟</dt>
+      <dd>
+      <p>یہاں کھیل میں دو حالتوں میں سے ایک ہے. اپنے CPU باہر maxing ہے، یا آپ براؤزر سرور سے رابطہ قائم کر سکتے ہیں، لیکن (نظام پیج لوڈ کرنے unsucessfully کوشش کر رہا ہے) کچھ بھی نظر نہیں یا تو. دونوں صورتوں میں آپ اپاچی لاگ فائل میں مندرجہ ذیل پیغام حاصل کر سکتے ہیں:</p>
+      <p><code>Child: Encountered too many AcceptEx faults accepting client connections.
+winnt_mpm: falling back to 'AcceptFilter none'.</code></p>
+      <p>MPM ایک محفوظ عمل درآمد کرنے کے لئے واپس آتا ہے، لیکن کچھ کلائنٹ کی درخواستوں کو صحیح طریقے سے عملدرآمد نہیں کیا گیا. اس خرابی سے بچنے کے لئے، میں فلٹر قبول "کوئی نہیں" کے ساتھ "AcceptFilter" استعمال "\\ \\ xampp کی \\ \\ اپاچی \\ \\ CONF \\ \\ اضافی \\ httpd پر-mpm.conf \\" فائل.</p>
+      </dd>
+
+      <dt>کیوں تصاویر اور سٹائل شیٹ ظاہر نہیں کر رہے ہیں؟</dt>
+      <dd>
+      <p>کبھی کبھی کی نمائش تصاویر اور سٹائل شیٹ کے ساتھ مسائل ہیں. ان فائلوں کو ایک نیٹ ورک ڈرائیو پر واقع ہیں خاص طور پر اگر. اس صورت میں آپ کو چالو (یا شامل کریں) ایک فائل میں مندرجہ ذیل لائنوں "\xampp\apache\CONF \ httpd.conf" اگر کر سکتے ہیں:</p>
+      <p><code>EnableSendfile off</br>
+EnableMMAP off</code></p>
+      <p>یہ مسئلہ بھی NetLimiter طرح، بینڈ وڈتھ کو ریگولیٹری کے لئے پروگرام کی وجہ سے کیا جا سکتا ہے.</p>
+      </dd>
+
+      <dt>How do I send email with XAMPP?</dt>
+      <dd>
+        <p>To configure XAMPP to use the included sendmail.exe binary for email delivery, follow these steps:</p>
+        <ul>
+          <li>Edit the XAMPP "php.ini" file. Within this file, find the [mail function] section and replace it with the following directives. Change the XAMPP installation path if needed.
+          <code>
+          sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+          </code>
+          </li>
+          <li>Edit the XAMPP "sendmail.ini" file. Within this file, find the [sendmail] section and replace it with the following directives:
+          <code>
+          smtp_server=smtp.gmail.com
+          smtp_port=465
+          smtp_ssl=auto
+          error_logfile=error.log
+          auth_username=your-gmail-username@gmail.com
+          auth_password=your-gmail-password
+          </code>
+          <p>Remember to replace the dummy values shown with your actual Gmail address and account password. If you don't plan to use Gmail's SMTP server, replace the SMTP host details with appropriate values for your organization or ISP's SMTP server.</p>
+          </li>
+          <li>Restart the Apache server using the XAMPP control panel.
+          </li>
+        </ul>
+        <p>You can now use PHP's mail() function to send email from your application.</p> 
+      </dd>
+      
+      <dt>میں کس طرح MySQL میں ایک روٹ کے پاس ورڈ مقرر کر سکتے ہیں؟</dt>
+      <dd>
+      <p>Configure it with the "XAMPP Shell" (command prompt). Open the shell from the XAMPP control pane and execute this command:<code>mysqladmin.exe -u root password secret</code>This sets the root password to 'secret'.</p>
+      </dd>
+
+      <dt>میں اپنے MySQL سرور کا استعمال کر سکتے ہیں؟</dt>
+      <dd>
+      <p>جی ہاں. بس XAMPP کی پیکج کی طرف سے MySQL شروع نہیں کرتے. دو سرورز اسی بندرگاہ پر شروع نہیں کیا جا سکتا ہے براہ مہربانی نوٹ. آپ کو "جڑ" کے لئے ایک پاس ورڈ مقرر ہے تو، فائل "\xampp\phpMyAdmin کے \config.inc.php \" ترمیم کرنے کے لئے نہیں بھولنا.</p>
+      </dd>
+
+      <dt>میں کس طرح باہر سے phpMyAdmin کے تک رسائی کو محدود کرتے ہیں؟</dt>
+      <dd>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
+      <p>آپ MySQL سرور تک رسائی حاصل کر سکتے ہیں اس سے پہلے کہ، phpMyAdmin کے ایک صارف نام اور پاس ورڈ کے لئے آپ کو فوری طور پر کیا جائے گا. سب سے پہلے صارف "جڑ" کے لئے ایک پاس ورڈ کو قائم کرنے کے لئے نہیں بھولنا.</p>
+      </dd>
+
+      <dt>How do I enable access to phpMyAdmin from the outside?</dt>
+      <dd>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
+      <p>IMPORTANT: Enabling external access for phpMyAdmin in production environments is a significant security risk. You are strongly advised to only allow access from localhost. A remote attacker could take advantage of any existing vulnerability for executing code or for modifying your data.</p>
+      <p>To enable remote access to phpMyAdmin, follow these steps:</p>
+      <ul>
+        <li>Edit the apache\conf\extra\httpd-xampp.conf file in your XAMPP installation directory.</li>
+        <li>Within this file, find the lines below. 
+          <p><code>
+              Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
+              &lt;Directory "C:/xampp/phpMyAdmin"&gt;
+                AllowOverride AuthConfig
+                Require local
+          </code></p>
+        </li>
+        <li>Then replace 'Require local' with 'Require all granted'.</li>
+          <p><code>
+              Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
+              &lt;Directory "C:/xampp/phpMyAdmin"&gt;
+                AllowOverride AuthConfig
+                Require all granted
+          </code></p>
+        <li>Restart the Apache server using the XAMPP control panel.</li>
+      </ul>
+      </dd>
+      
+      <dt>کہاں PHP کے لئے IMAP کی حمایت کی ہے؟</dt>
+      <dd>
+      <p>ڈیفالٹ کے طور پر، PHP کے لئے IMAP کی حمایت کی وجہ سے Windows 98 کی طرح کچھ تلاش ہوم ورژن کے ساتھ کچھ پراسرار ابتدا غلطیوں XAMPP کی میں غیر فعال ہے. آپ NT نظام کے ساتھ کام کرتے ہیں تو، آپ فائل کو کھولنے کر سکتے ہیں "\ xampp\PHP \php.ini" لائن میں شروع نیم وقفہ اتارنے کی طرف سے PHP کی exstension چالو کرنے کے لئے "؛ توسیع = php_imap.dll". یہ ہونا چاہئے:</br>
+<code>extension=php_imap.dll</code></p>
+      <p>اب Apache دوبارہ شروع اور IMAP کام کرنا چاہئے. آپ ڈیفالٹ ترتیب میں فعال نہیں ہے جس میں ہر توسیع، کے لئے ایک ہی اقدامات استعمال کر سکتے ہیں.</p>
+      </dd>
+
+      <dt>کیوں نہیں کچھ PHP اوپن سورس ایپلی کیشنز Windows کے ساتھ XAMPP کام کرتے ہیں؟</dt>
+      <dd>
+      <p>لینکس کے لئے لکھا گیا ہے کہ PHP کی ایپلی کیشنز یا ملانے کے بہت سے Windows ported کیا نہیں کیا گیا ہے. </p>
+      </dd>
+
+      <dt>Can I delete the "install" directory after installation?</dt>
+      <dd>
+      <p>یہ بہتر ہے. یہاں سکرپٹ بھی تمام اضافی پیکجوں کے (ons شامل) اور XAMPP کی کی اپ گریڈ کے لئے کی ضرورت ہے.</p>
+      </dd>
+
+      <dt>میں کس طرح eaccelerator چالو کرتے ہیں؟</dt>
+      <dd>
+      <p>دیگر (Zend) ملانے کی طرح، آپ کو "php.ini" میں اسے چالو کر سکتے ہیں. اس فائل میں، لائن کو چالو کرنے کے "؛ zend_extension =" \xampp\PHP \ ایکسٹینشن \php_eaccelerator.dll "". یہ ہونا چاہئے:</br>
+<code>zend_extension = "\xampp\php\ext\php_eaccelerator.dll"</code></p>
+      </dd>
+
+      <dt>میں کس طرح اپنے MS SQL سرور کے لئے ایک کنکشن کی خرابی ٹھیک کروں؟</dt>
+      <dd>
+      <p>MSSQL توسیع php.ini میں لوڈ کیا گیا تو صرف TCP / IP استعمال کیا جاتا ہے، بعض اوقات مسائل نظر آتے ہیں. آپ مائیکروسافٹ کی طرف سے ایک نئے "ntwdblib.dll" کے ساتھ اس مسئلہ کو حل کر سکتے ہیں. نئے ایک کے ساتھ "PHP \xampp\ \" "Apache \بن \xampp\" میں بڑی عمر کے فائل کی جگہ اور براہ مہربانی. کیونکہ لائسنس کی، ہم ساتھ XAMPP اس فائل کا نیا ورژن پیکج نہیں کر سکتے ہیں.</p>
+      </dd>
+
+      <dt>میں کس طرح PHP mcrypt توسیع کے ساتھ کام کرتے ہیں؟</dt>
+      <dd>
+      <p>اس کے لئے، ہم نے مثالیں اور ممکنہ حل کے ساتھ فورم میں موضوع کھول دیا ہے:٪ {mcrypt}</p>
+      </dd>
+
+      <dt>مائیکروسافٹ Active سرور (صفحات یسپ) کے ساتھ XAMPP کام کرتے ہیں؟</dt>
+      <dd>
+      <p>Perl شامل کریں پر کے ساتھ نمبر اور Apache :: یسپ ہی نہیں ہے. Apache :: یسپ صرف Perl سکرپٹ جانتا ہے، لیکن انٹرنیٹ انفارمیشن سرور (IIS) سے یسپ بھی عام ہے VbScript جانتا ہے. لیکن یسپ NET. لئے، دستیاب 3rd پارٹی Apache ماڈیول ہے.</p>
+      </dd>
+
+      <dt>How can I get XAMPP working on port 80 under Windows 10?</dt>
+      <dd>
+      <p>By default, Windows 10 starts Microsoft IIS on port 80, which is the same default port used by Apache in XAMPP. As a result, Apache cannot bind to port 80.</p>
+      <p>To deactivate IIS from running on port 80, follow these steps:</p>
+      <ul>
+        <li>Open the Services panel in Computer Management.</li>
+        <li>Search for the 'World Wide Web Publishing Service' and select it.</li>
+        <li>Click the link to 'Stop the service'.</li>
+        <li>Double-click the service name.</li>
+        <li>In the 'Startup type' field, change the startup type to 'Disabled'.</li>
+        <li>Click 'OK' to save your changes.</li>
+      </ul>
+      <p>You should now be able to start Apache in XAMPP on port 80.</p>
+      <p>For more information, refer to the 'Troubleshoot Apache Startup Problems' guide included with XAMPP or <a href='https://community.apachefriends.org/f/viewtopic.php?f=16&t=71620'>this forum post</a>.</p>
+      </dd>
+      
+      <dt>How can I use Microsoft Edge to access local addresses under Windows 10?</dt>
+      <dd>
+      <p>If your local machine has the host name 'myhost', you will not be able to access URLs such as http://myhost in Microsoft Edge. To resolve this, you should instead use the addresses http://127.0.0.1 or http://localhost.</p>
+      </dd>
+
+      <dt>Where are the main XAMPP configuration files?</dt>
+      <dd>
+        <p>The main XAMPP configuration files are located as follows:</p>
+        <ul>
+          <li>Apache configuration file: \xampp\apache\conf\httpd.conf, \xampp\apache\conf\extra\httpd-xampp.conf</li>
+          <li>PHP configuration file: \xampp\php\php.ini</li>
+          <li>MySQL configuration file: \xampp\mysql\bin\my.ini</li>
+          <li>FileZilla Server configuration file: \xampp\FileZillaFTP\FileZilla Server.xml</li>
+          <li>Apache Tomcat configuration file: \xampp\tomcat\conf\server.xml</li>
+          <li>Apache Tomcat configuration file: \xampp\sendmail\sendmail.ini</li>
+          <li>Mercury Mail configuration file: \xampp\MercuryMail\MERCURY.INI</li>
+        </ul>
+      </dd>
+
+    </dl>
+  </div>
+</div>
+
+    </div>
+
+    <footer class="footer row">
+      <div class="columns">
+        <div class="footer_lists-container row collapse">
+          <div class="footer_social columns large-2">
+            <ul class="social">
+  <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
+  <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+</ul>
+
+            <p class="footer_copyright">کاپی رائٹ 2022, Apache Friends</p>
+          </div>
+          <ul class="footer_links columns large-9">
+            <li><a href="https://www.apachefriends.org/blog.html">بلاگ</a></li>
+            <li><a href="/privacy_policy.html">رازداری کی پالیسی</a></li>
+            <li>
+<a target="_blank" href="http://www.fastly.com/">                CDN کی طرف سے فراہم
+                <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/dashboard/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>
