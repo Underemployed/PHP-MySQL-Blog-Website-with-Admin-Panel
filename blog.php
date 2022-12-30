@@ -1,29 +1,21 @@
 <?php 
 include 'partials/header.php'
 ?>
-    
-    <section class="featured">
-        <div class ="container featured__container">            
-            <div class="post__thumbnail">
-                <img src="./images/blog1.jpg">
+    <section class="search__bar">
+        <form  class="container search__bar-container" action="">
+            <div>
+                <i class="uil uil-search"></i>
+                <input type="search" name="" placeholder="Search">
+                <button type="submit" class="btn">Go</button> 
             </div>
-            <div class="post__info">
-                <a href="category-posts.php" class="category__button">Wild Life</a>
-                <h2 class="post__info"><a href="post.php">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid!</a></h2>
-                <p class="post__body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem reiciendis in fuga consequatur eligendi molestiae, magnam assumenda laborum inventore deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit maxime sapiente dolores iure quae necessitatibus ut perferendis aliquam fugiat cupiditate. 
-                </p>
-                <div class="post__author-avatar">
-                        <img src="./images/avatar3.jpg">
-                </div>
-                    <div class="post__author-info">
-                        <h5>By: Underemployed</h5>
-                        <small>June 10, 2022 - 07:23</small>
-                    </div>
-                </div>
-        </div>
+            
+        </form>
+        
+
     </section>
-    <!-- ===================END OF FEATURED================-->
+    
+    
+    <!-- ===================END OF SEARCH================-->
 
     <section class="posts">
 
@@ -34,7 +26,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -56,7 +48,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -79,7 +71,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -103,7 +95,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -126,7 +118,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -149,7 +141,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -172,7 +164,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -196,7 +188,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -219,7 +211,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -242,7 +234,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -267,7 +259,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -291,7 +283,7 @@ include 'partials/header.php'
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.php" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
                     <p class="post__body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
                     </p>
@@ -329,3 +321,5 @@ include 'partials/header.php'
 <?php
 include './partials/footer.php';
 ?>
+
+
