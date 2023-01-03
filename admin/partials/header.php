@@ -1,5 +1,5 @@
 <?php
-require '../config/database.php';
+require 'config/database.php';
 
 
 ?>

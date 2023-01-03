@@ -20,7 +20,7 @@ include "partials/header.php";
                         
                     <li>
                         <a href="<?= ROOT_URL ?>admin/index.php" class="active" >
-                            <i class="uil uil-pen"></i>
+                        <i class="uil uil-postcard"></i>
                             <h5>Manage Posts</h5>
                         </a>
                     </li>
@@ -70,7 +70,7 @@ include "partials/header.php";
                         </tr>
                         <tr>
                             <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, corrupti!</td>
-                            <td><a href="<?= ROOT_URL ?>admin/edit-posts.php" class="btn sm">Edit</a></td>
+                            <td><a href="<?= ROOT_URL ?>admin/edit-post.php" class="btn sm">Edit</a></td>
                             <td><a href="<?= ROOT_URL ?>admin/delete-category.php" class="btn sm danger">Delete</a></td>
                         </tr>
                         <tr>
