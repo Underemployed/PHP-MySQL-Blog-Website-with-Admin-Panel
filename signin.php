@@ -1,3 +1,13 @@
+<?php
+session_start();
+include 'config/constants.php';
+
+$username_email = $_SESSION['signin-data']['username_email'] ??null ;
+$password = $_SESSION['signin-data']['password'] ??  null;
+
+unset($_SESSION['signin-data']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +28,39 @@
 <section class="form__section">
 
     <div class="container form__section-container">
-        <h2>Sign In</h2>
-        <div class="alert__message success">
-            <p>This is an success message</p>
-        </div>
-        <form action="">
-            <input type="text" placeholder="Username or Email">
-            <input type="password" placeholder=" Password">
+        <h2>Sign In</h2> 
 
-            <button type="submit" class="btn">Sign in</button>
+        
+        <?php if(isset($_SESSION['signin-success'])): ?>
+        
+        <div class="alert__message success">
+            <p>
+                <?=$_SESSION['signin-success'];
+                unset($_SESSION['signin-success']); 
+                ?>
+            </p>
+        </div>
+
+        
+        <?php elseif(isset($_SESSION['signin'])): ?>
+        
+        <div class="alert__message error">
+            <p>
+                <?=$_SESSION['signin'];
+                unset($_SESSION['signin']); 
+                ?>
+            </p>
+        </div>
+
+        <?php endif ?>
+
+
+
+        <form action="<?= ROOT_URL ?>signin-logic.php" method="POST">
+            <input type="text"     name="username_email"  value = '<?= $username_email ?>' placeholder="Username or Email">
+            <input type="password" name="password"        value = '<?= $password ?>' placeholder=" Password">
+
+            <button type="submit" class="btn"  name ="submit"   >Sign in</button>
             <small>Don't have an account? <a href="signup.php">Sign up</a></small>
         </form>
     </div>
