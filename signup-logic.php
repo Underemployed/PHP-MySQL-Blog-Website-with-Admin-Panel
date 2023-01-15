@@ -45,7 +45,7 @@ if(isset($_POST["submit"])){
                 $time = time(); // make each image name unique using current timestamp 
                 $avatar_name = $time . $avatar['name'];
                 $avatar_tmp_name=$avatar['tmp_name'];
-                $avatar_destination_path='images/ ' . $avatar_name;
+                $avatar_destination_path='images/' . $avatar_name;
 
                 //,ake sure file is an image
                 $allowed_files = ['png', 'jpg', 'jpeg'];

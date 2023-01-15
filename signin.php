@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'config/constants.php';
 
 $username_email = $_SESSION['signin-data']['username_email'] ??null ;

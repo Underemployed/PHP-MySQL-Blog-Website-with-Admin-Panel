@@ -24,7 +24,7 @@ include "partials/header.php";
                             <h5>Manage Posts</h5>
                         </a>
                     </li>
-    
+                    <?php  if(isset($_SESSION['user_is_admin'])) : ?>
                     <li>
                         <a href="<?= ROOT_URL ?>admin/add-user.php">
                             <i class="uil uil-user-plus"></i> 
@@ -50,6 +50,7 @@ include "partials/header.php";
                             <h5>Manage Categories</h5>
                         </a>
                     </li>
+                    <?php endif ?>
                 </ul>
             </aside>
             <main>
