@@ -28,18 +28,19 @@ unset($_SESSION['signin-data']);
 
     <div class="container form__section-container">
         <h2>Sign In</h2> 
-
-        
-        <?php if(isset($_SESSION['signin-success'])): ?>
-        
-        <div class="alert__message success">
+        <?php
+        if(isset($_SESSION['signup-success'])): 
+        ?> 
+            <div class="alert__message success">
             <p>
-                <?=$_SESSION['signin-success'];
-                unset($_SESSION['signin-success']); 
+                <?= $_SESSION['signup-success'];
+                unset($_SESSION['signup-success']);
                 ?>
             </p>
-        </div>
-
+            
+            </div>
+        
+        
         
         <?php elseif(isset($_SESSION['signin'])): ?>
         

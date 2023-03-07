@@ -1,7 +1,6 @@
 <?php
 require "config/database.php";
 
-session_start();
 
 if(isset($_POST['submit'])){
     // getting input
@@ -30,14 +29,15 @@ if(isset($_POST['submit'])){
 
                 // set session for access control
                 $_SESSION['user-id'] = $user_record['id'];
+                $_SESSION['signin-success'] = "User successfully logged in";
 
                 //set session if user is  admin
                 if($user_record['is_admin']==1){
-                    $_SESSION['user_is_admin'] == true;
+                    $_SESSION['user_is_admin'] = true;
 
                 }
                 //log in user
-                header('location: ' . ROOT_URL . 'admin/');
+                header('location: ' . ROOT_URL . 'admin/index.php');
                 
             }else{
                 $_SESSION['signin'] = "Please check your input";

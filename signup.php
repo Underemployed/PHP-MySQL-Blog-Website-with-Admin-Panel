@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include "config/constants.php";
 
 //get beck form DATA IF THERE IS A REGISTRATION ERROR
@@ -9,6 +9,8 @@ $username=$_SESSION['signup-data']['username'] ?? null;
 $email=$_SESSION['signup-data']['email'] ?? null;
 $createpassword=$_SESSION['signup-data']['createpassword'] ?? null;
 $confirmpassword = $_SESSION['signup-data']['confirmpassword'] ?? null;
+
+
 //delete signup data session
 unset($_SESSION['signup-data']);
 

@@ -1,12 +1,26 @@
 <?php 
-include 'partials/header.php'
+include 'partials/header.php';
+
+
+//featured
+$featured_query="SELECT * FROM posts WHERE is_featured=1";
+$featured_result=mysqli_query($connection,$featured_query);
+$featured=mysqli_fetch_assoc($featured_result);
+
+//fetch 9post
+
+
+$query="SELECT * FROM posts ORDER BY date_time DESC";
+$posts=mysqli_query($connection,$query);
+
+
 ?>
     <section class="search__bar">
-        <form  class="container search__bar-container" action="">
+        <form  class="container search__bar-container" action="<?=ROOT_URL?>search.php" method="GET">
             <div>
                 <i class="uil uil-search"></i>
-                <input type="search" name="" placeholder="Search">
-                <button type="submit" class="btn">Go</button> 
+                <input type="search" name="search" placeholder="Search">
+                <button type="submit" name = "submit" class="btn">Go</button> 
             </div>
             
         </form>
@@ -16,305 +30,68 @@ include 'partials/header.php'
     
     
     <!-- ===================END OF SEARCH================-->
-
-    <section class="posts">
+    <section class="posts <?= $featured ? "" : "section__extra-margin" ?>">
 
         <div class="container posts__container">
+            <?php while ($post=mysqli_fetch_assoc($posts)) :?>
             <article class="post">
                 <div class="post__thumbnail">
-                    <img src="./images/blog3.jpg" alt="">
+                    <img src="./images/<?=$post['thumbnail']?>" >
                 </div>
                 <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
+                <?php
+                //fetch category
+                $category_id=$post['category_id'];
+                $category_query="SELECT * FROM categories WHERE id=$category_id";
+                $category_result=mysqli_query($connection,$category_query);
+                $category=mysqli_fetch_assoc($category_result); 
+
+                $author_id=$post['author_id'];
+                $author_query="SELECT * FROM users WHERE id=$author_id";
+                $author_result=mysqli_query($connection,$author_query);
+                $author=mysqli_fetch_assoc($author_result);
+                            
+                ?>
+                    <a href="category-posts.php?id=<?=$post['category_id']?>" class="category__button"><?=$category['title']?></a>
+                    <h3 class="post__title"><a href="post.php?id=<?=$post["id"]?>" >
+                        <?=$post['title']?>
+                    </a></h3>
                     <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
+                    <?= substr($post['body'],0,150) ?>...                    
                     </p>
                     <div class="post__author">
                         <div class="post__author-avatar">
-                                <img src="./images/avatar4.jpg" alt="">
+                        <img src="./images/<?= $author['avatar'] ?>">
                         </div>
                         <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
+                            <h5>By: <?= "{$author['firstname']} {$author['lastname']}" ?></h5>
+                            <small>
+                            <?=date("M d, Y -H:i" , strtotime($post['date_time']))?>
+                            </small>
                         </div>
                     </div>
                 </div>
+
             </article>
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog4.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar5.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog5.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar6.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog6.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar7.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog7.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar8.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog8.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar9.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog9.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar10.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog10.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar11.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog11.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar12.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog12.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar13.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog14.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar14.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog15.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, iusto!</a></h3>
-                    <p class="post__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem! Minima ipsam obcaecati commodi nam aliquid delectus magnam molestiae nobis?
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                                <img src="./images/avatar15.jpg" alt="">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Jone titus</h5>
-                            <small>June 12,2022 - 20:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
+            <?php endwhile ?>
         </div>
-
     </section>
+
+
 
     <!--=====================================================================
     ==========================END OF THE POSTS===============================
   =================================================================== -->
   <section class="category__buttons">
     <div class="container category__buttons-container">
-        <a href="" class="category__button">Wild Life</a>
-        <a href="" class="category__button">Music</a>
-        <a href="" class="category__button">Movies</a>
-        <a href="" class="category__button">Travel</a>
-        <a href="" class="category__button">Science & Technology</a>
-        <a href="" class="category__button">Food</a>
+        <?php 
+        $all_categories_query="SELECT * FROM categories ";
+        $all_categories_result=mysqli_query($connection,$all_categories_query);
+
+        ?>
+        <?php while ( $category=mysqli_fetch_assoc($all_categories_result) ) : ?>
+        <a href="<?=ROOT_URL?>category-posts.php?id=<?=$category['id']?>" class="category__button"><?=$category['title']?></a>
+        <?php endwhile?>
     </div>
   </section>
   <!--=======================END OF CATEGORY ===================================-->

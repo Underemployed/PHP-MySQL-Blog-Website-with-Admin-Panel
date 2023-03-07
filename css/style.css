@@ -458,7 +458,9 @@ footer ul a:hover{
     display: grid;
     place-content: center;
 }
-
+.post_info{
+    align-items: left;
+}
 
 
 /*=======================================================================================
