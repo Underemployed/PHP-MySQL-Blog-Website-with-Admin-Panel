@@ -15,7 +15,7 @@ Overall, the PHP & MySQL Blog App with Admin Panel project is an excellent learn
 
 |  #  | WebPage                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 01  | [Index]                             | [Live Demo](https://underemployed.github.io/index.html)               |
+| 01  | Index                             | [Live Demo](https://underemployed.github.io/index.html)               |
 | 02  | [Blog]                             | [Live Demo](https://underemployed.github.io/blog.html)               |
 | 03  | [Category_Post]                             | [Live Demo](https://underemployed.github.io/category-posts.html)               |
 | 04  | [About]                             | [Live Demo](https://underemployed.github.io/about.html)               |
