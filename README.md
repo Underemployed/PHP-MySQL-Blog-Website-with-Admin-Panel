@@ -25,14 +25,14 @@ The PHP & MySQL Blog App with Admin Panel project is a web application that allo
  
 |  #  | WebPage                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 01  | Index                             | [Live Demo](https://underemployed.github.io/blog_website_template/index.html)               |
-| 02  | Blog                             | [Live Demo](https://underemployed.github.io/blog_website_template/blog.html)               |
-| 03  | Category_Post                             | [Live Demo](https://underemployed.github.io/blog_website_template/category-posts.html)               |
-| 04  | About                             | [Live Demo](https://underemployed.github.io/blog_website_template/about.html)               |
-| 05  | Services                             | [Live Demo](https://underemployed.github.io/blog_website_template/services.html)               |
-| 06  | Contact                             | [Live Demo](https://underemployed.github.io/blog_website_template/contact.html)               |
-| 07  | SignIn                             | [Live Demo](https://underemployed.github.io/blog_website_template/signin.html)               |
-| 08  | SignUp                             | [Live Demo](https://underemployed.github.io/blog_website_template/signup.html)               |
+| 01  | Index                             | [Live Demo](https://underemployed.lovestoblog.com/index.html)               |
+| 02  | Blog                             | [Live Demo](https://underemployed.lovestoblog.com/blog.html)               |
+| 03  | Category_Post                             | [Live Demo](https://underemployed.lovestoblog.com/category-posts.html)               |
+| 04  | About                             | [Live Demo](https://underemployed.lovestoblog.com/about.html)               |
+| 05  | Services                             | [Live Demo](https://underemployed.lovestoblog.com/services.html)               |
+| 06  | Contact                             | [Live Demo](https://underemployed.lovestoblog.com/contact.html)               |
+| 07  | SignIn                             | [Live Demo](https://underemployed.lovestoblog.com/signin.html)               |
+| 08  | SignUp                             | [Live Demo](https://underemployed.lovestoblog.com/signup.html)               |
 | 09  | Dashboard                             | [Live Demo](https://underemployed.github.io/blog_website_template/dashboard.html)               |
 | 10  | Edit_Posts                             | [Live Demo](https://underemployed.github.io/blog_website_template/edit-post.html)               |
 | 11  | Add_Post                             | [Live Demo](https://underemployed.github.io/blog_website_template/add-post.html)               |
