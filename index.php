@@ -39,7 +39,7 @@ $posts=mysqli_query($connection,$query);
                 <a href="category-posts.php?id=<?= $category_id ?>" class="category__button"><?=$category['title']?></a>
                 <h2 class="post__title"><a href="post.php?id=<?=$featured['id']?>"><?=$featured['title']?></a></h2>
                 <p class="post__body">
-                    <?= substr($featured['body'],0,300) ?>...
+                    <?= substr(html_entity_decode($post['body']), 0, 120) ?>...
                 </p>
                 <div class="post__author-avatar">
                 <img src="./images/<?= $author['avatar'] ?>">
@@ -100,7 +100,6 @@ $posts=mysqli_query($connection,$query);
               <small><?= date("M d, Y - H:i", strtotime($post['date_time'])) ?></small>
             </div>
           </div>
-          </h3>
         </div>
       </article>
     <?php endwhile; ?>

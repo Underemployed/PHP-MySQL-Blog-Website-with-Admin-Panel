@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_is_admin'])){
 
 if(isset($_GET['id'])){
     $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
-    $query = "SELECT firstname,lastname FROM users WHERE id='$id'";
+    $query = "SELECT firstname,lastname,is_admin FROM users WHERE id='$id'";
     $result = mysqli_query($connection, $query);
     $user = mysqli_fetch_assoc($result);
 }else{
@@ -24,7 +24,7 @@ if(isset($_GET['id'])){
         <input type="hidden" value="<?=$id?>" name='id'>
             <input type="text" name ="firstname" value="<?= $user['firstname'] ?>"  placeholder="First Name">
             <input type="text" name ="lastname"  value="<?= $user['lastname'] ?>"   placeholder="Last Name">
-            <select name ="userrole" >
+            <select name ="userrole" value = "<?= $user['is_admin'] ?>">
 
                 <option value="0" >Author</option>
                 <option value="1">Admin</option>

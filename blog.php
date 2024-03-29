@@ -51,7 +51,7 @@ $posts=mysqli_query($connection,$query);
           <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>">
 
             <p class="post__body" style="min-height: 100px;">
-              <?= substr($post['body'], 0, 120) ?>...
+              <?= substr(html_entity_decode($post['body']), 0, 120) ?>...
             </p>
           </a>
 
@@ -73,7 +73,6 @@ $posts=mysqli_query($connection,$query);
               <small><?= date("M d, Y - H:i", strtotime($post['date_time'])) ?></small>
             </div>
           </div>
-          </h3>
         </div>
       </article>
     <?php endwhile; ?>
