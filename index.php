@@ -39,7 +39,7 @@ $posts=mysqli_query($connection,$query);
                 <a href="category-posts.php?id=<?= $category_id ?>" class="category__button"><?=$category['title']?></a>
                 <h2 class="post__title"><a href="post.php?id=<?=$featured['id']?>"><?=$featured['title']?></a></h2>
                 <p class="post__body">
-                    <?= substr(html_entity_decode($post['body']), 0, 120) ?>...
+                    <?= substr(html_entity_decode($featured['body']), 0, 300) ?>...
                 </p>
                 <div class="post__author-avatar">
                 <img src="./images/<?= $author['avatar'] ?>">

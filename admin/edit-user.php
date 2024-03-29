@@ -24,12 +24,10 @@ if(isset($_GET['id'])){
         <input type="hidden" value="<?=$id?>" name='id'>
             <input type="text" name ="firstname" value="<?= $user['firstname'] ?>"  placeholder="First Name">
             <input type="text" name ="lastname"  value="<?= $user['lastname'] ?>"   placeholder="Last Name">
-            <select name ="userrole" value = "<?= $user['is_admin'] ?>">
-
-                <option value="0" >Author</option>
-                <option value="1">Admin</option>
-
-            </select>
+			<select name="userrole">
+				<option value="0">Author</option>
+				<option <?= $user['is_admin'] ? 'selected' : '' ?> value="1">Admin</option>
+			</select>
             <button type="submit" name="submit" class="btn">Update User</button>
         </form>
     </div>
