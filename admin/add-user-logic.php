@@ -1,7 +1,10 @@
 <?php
 require "config/database.php";
-session_start();
-
+if(!isset($_SESSION['user_is_admin'])){
+    header("location: " . ROOT_URL . "logout.php");
+    //destroy all sessions and redirect user to login page
+    session_destroy();
+}
 //get add-user form data if sbmit button is clicked
 
 if(isset($_POST["submit"])){

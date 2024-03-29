@@ -1,5 +1,6 @@
 <?php
 require 'config/database.php';
+
 if(isset($_POST['submit'])){
     $id=filter_var($_POST['id'],FILTER_SANITIZE_NUMBER_INT);
     $is_featured=filter_var($_POST['is_featured'],FILTER_SANITIZE_NUMBER_INT);

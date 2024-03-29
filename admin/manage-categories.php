@@ -1,6 +1,10 @@
 <?php
 include "partials/header.php";
-
+if(!isset($_SESSION['user_is_admin'])){
+    header("location: " . ROOT_URL . "logout.php");
+    //destroy all sessions and redirect user to login page
+    session_destroy();
+}
 //fetch categories from database
 $query = "SELECT * FROM categories ORDER BY title";
 $categories=mysqli_query($connection,$query)

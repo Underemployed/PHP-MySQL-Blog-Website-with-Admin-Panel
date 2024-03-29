@@ -60,3 +60,4 @@ if(isset($_POST['submit'])){
     header('location: ' . ROOT_URL . "signin.php");
     die();
 }
+// error_log();

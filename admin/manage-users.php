@@ -3,7 +3,11 @@ include "partials/header.php";
 
 
 $current_admin_id = $_SESSION['user-id'];
-
+if(!isset($_SESSION['user_is_admin'])){
+    header("location: " . ROOT_URL . "logout.php");
+    //destroy all sessions and redirect user to login page
+    session_destroy();
+}
 $query="SELECT id,firstname,lastname,username,is_admin FROM users WHERE NOT id='$current_admin_id'";
 $users=mysqli_query($connection,$query);
 ?>

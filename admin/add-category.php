@@ -1,5 +1,10 @@
 <?php
 include "partials/header.php";
+if(!isset($_SESSION['user_is_admin'])){
+    header("location: " . ROOT_URL . "logout.php");
+    //destroy all sessions and redirect user to login page
+    session_destroy();
+}
 $title = $_SESSION["add-category-data"]['title'] ?? null;
 $description = $_SESSION["add-category-data"]['description'] ?? null;
 

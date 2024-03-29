@@ -1,5 +1,10 @@
 <?php
 include "partials/header.php";
+if(!isset($_SESSION['user_is_admin'])){
+    header("location: " . ROOT_URL . "logout.php");
+    //destroy all sessions and redirect user to login page
+    session_destroy();
+}
 if(isset($_GET['id'])){
     $id=filter_var($_GET['id'],FILTER_SANITIZE_NUMBER_INT);
 
