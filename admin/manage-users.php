@@ -136,7 +136,7 @@ $users=mysqli_query($connection,$query);
                     <tbody>
                         <?php while($user=mysqli_fetch_assoc($users)): ?>
                         <tr>
-                            <td><?= $user["firstname"] . $user['lastname'] ?></td>
+                            <td><?= $user["firstname"] . " " . $user['lastname'] ?></td>
                             <td><?= $user["username"]  ?> </td>
                             <td><a href="<?= ROOT_URL ?>admin/edit-user.php?id=<?= $user['id'] ?>" class="btn sm">Edit</a></td>
                             <td><a href="<?= ROOT_URL ?>admin/delete-users.php?id=<?= $user['id'] ?>" class="btn sm danger">Delete</a></td>
